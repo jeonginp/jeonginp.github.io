@@ -44,7 +44,15 @@
                 {% if item.website %}
                   <a href="{{ item.website }}" target="_blank">Website</a>
                 {% endif %}
+                {% if item.abstract and item.abstract != "" %}
+                  <a href="javascript:void(0)" class="abstract-toggle" onclick="toggleAbstract(this)">Abstract</a>
+                {% endif %}
               </div>
+              {% if item.abstract and item.abstract != "" %}
+              <div class="publication-abstract" style="display: none;">
+                {{ item.abstract }}
+              </div>
+              {% endif %}
             </span>
           </div>
           {% endfor %}
@@ -55,5 +63,16 @@
     {% include footer.html %}
 
     {% include foot.html %}
+
+    <script>
+    function toggleAbstract(element) {
+      var abstractDiv = element.closest('.publication-text').querySelector('.publication-abstract');
+      if (abstractDiv.style.display === 'none') {
+        abstractDiv.style.display = 'block';
+      } else {
+        abstractDiv.style.display = 'none';
+      }
+    }
+    </script>
   </body>
 </html>

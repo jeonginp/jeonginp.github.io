@@ -17,6 +17,12 @@ profile_picture:
     <a href="/curriculum-vitae" target="_blank" title="View CV">
         CV
     </a>
+    <a href="https://scholar.google.com/citations?user=5P0SThgAAAAJ" target="_blank" title="Google Scholar">
+      <i class="ai ai-google-scholar"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/jeongin-park-737671410/" target="_blank" title="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
   </div>
 </div>
 I design and study human–AI interfaces that help people interact with complex visual, auditory, and generative information more intuitively and adaptively.

@@ -13,7 +13,14 @@
       "Bash(git checkout:*)",
       "Bash(brew install:*)",
       "Bash(rbenv install:*)",
-      "Bash(rbenv local:*)"
+      "Bash(rbenv local:*)",
+      "Bash(brew --prefix:*)",
+      "Bash(gem install:*)",
+      "Bash(xcode-select:*)",
+      "Bash(gcc:*)",
+      "Bash(gem list:*)",
+      "Bash(softwareupdate:*)",
+      "Bash(rbenv versions:*)"
     ]
   }
 }

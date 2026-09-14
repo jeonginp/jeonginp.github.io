@@ -4,17 +4,20 @@
   teaser: /assets/img/publications/directvis.png
   doi: 10.1109/PacificVis68791.2026.00014
   pdf: /assets/pdf/directvis.pdf
+  abstract: "Visualization authoring novices often rely on large language model (LLM)-supported tools for code-based chart editing. However, it can be difficult for novices to precisely articulate what to change and how in natural language, which can make chart editing inefficient; e.g., requiring multiple rounds of iterative revisions. To address this problem, we propose DirectVis, a visualization editing system that integrates direct manipulation with code-based editing. Using DirectVis, users can clarify how a visualization should be edited by directly manipulating chart components. This interaction can be interpreted as users’ demonstration of their intended edits to the system. A user study verifies that our system facilitates the precise delivery of user intent, thereby improving the efficiency of chart editing compared to natural-language-based systems. Based on our findings, we derive design implications for future visualization editing tools."
 
 - title: Stop Misusing t-SNE and UMAP for Visual Analytics
   authors: Hyeon Jeon, Jeongin Park, Sungbok Shin, and Jinwook Seo
-  status: IEEE Transactions on Visualization and Computer Graphics (Proc. VIS 2026)
+  status: IEEE Transactions on Visualization and Computer Graphics (VIS 2026)
   teaser: /assets/img/publications/jeon_stopmisusing.png
   arxiv: https://arxiv.org/abs/2506.08725
   pdf: /assets/pdf/jeon_stopmisusing.pdf
+  abstract: "Misuses of t-SNE and UMAP in visual analytics have become increasingly common. For example, although t-SNE and UMAP projections often do not faithfully reflect the original distances between clusters, practitioners frequently use them to investigate inter-cluster relationships. We investigate why this misuse occurs, and discuss methods to prevent it. To that end, we first review 136 papers to verify the prevalence of the misuse. We then interview researchers who have used dimensionality reduction (DR) to understand why such misuse occurs. Finally, we interview DR experts to examine why previous efforts failed to address the misuse. We find that the misuse of t-SNE and UMAP stems primarily from limited DR literacy among practitioners, and that existing attempts to address this issue -- mostly based on academic papers -- have been ineffective. Based on these insights, we discuss potential future research directions to mitigate the misuse."
 
 - title: Dataset-Adaptive Dimensionality Reduction
   authors: Hyeon Jeon, Jeongin Park, Soohyun Lee, Dae Hyun Kim, Sungbok Shin, and Jinwook Seo
-  status: IEEE Transactions on Visualization and Computer Graphics (Proc. VIS 2025)
+  status: IEEE Transactions on Visualization and Computer Graphics (VIS 2025)
   teaser: /assets/img/publications/jeon_datasetadaptive.png
   doi: 10.1109/TVCG.2025.3634784
   pdf: /assets/pdf/jeon_datasetadaptive.pdf
+  abstract: "Selecting the appropriate dimensionality reduction (DR) technique and determining its optimal hyperparameter settings that maximize the accuracy of the output projections typically involves extensive trial and error, often resulting in unnecessary computational overhead. To address this challenge, we propose a dataset-adaptive approach to DR optimization guided by structural complexity metrics. These metrics quantify the intrinsic complexity of a dataset, predicting whether higher-dimensional spaces are necessary to represent it accurately. Since complex datasets are often inaccurately represented in two-dimensional projections, leveraging these metrics enables us to predict the maximum achievable accuracy of DR techniques for a given dataset, eliminating redundant trials in optimizing DR. We introduce the design and theoretical foundations of these structural complexity metrics. We quantitatively verify that our metrics effectively approximate the ground truth complexity of datasets and confirm their suitability for guiding dataset-adaptive DR workflow. Finally, we empirically show that our dataset-adaptive workflow significantly enhances the efficiency of DR optimization without compromising accuracy."

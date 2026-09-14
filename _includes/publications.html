@@ -32,7 +32,15 @@
         {% if item.website %}
           <a href="{{ item.website }}" target="_blank">Website</a>
         {% endif %}
+        {% if item.abstract and item.abstract != "" %}
+          <a href="javascript:void(0)" class="abstract-toggle" onclick="toggleAbstract(this)">Abstract</a>
+        {% endif %}
       </div>
+      {% if item.abstract and item.abstract != "" %}
+      <div class="publication-abstract" style="display: none;">
+        {{ item.abstract }}
+      </div>
+      {% endif %}
     </span>
   </div>
   {% endfor %}
