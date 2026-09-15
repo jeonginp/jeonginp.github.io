@@ -77,8 +77,15 @@
 }
 
 .publication-title {
-  font-size: 1em; /* Adjust the size as needed */
+  font-size: 1em;
   font-weight: 400;
+  color: #333;
+  text-decoration: none;
+}
+
+a.publication-title:hover {
+  color: #333;
+  text-decoration: underline;
 }
 
 .publication-authors {

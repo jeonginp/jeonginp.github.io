@@ -42,8 +42,16 @@ $on-laptop: 800px;
 
 .home-description {
   margin-right: 20px;
+  margin-bottom: 0;
   font-family: "Open Sans", sans-serif !important;
   font-weight: 300;
+}
+
+.home-subtitle {
+  font-size: 1em;
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 0.5em;
 }
 
 .contact-links a {

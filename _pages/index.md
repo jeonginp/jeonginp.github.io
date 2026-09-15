@@ -7,8 +7,11 @@ profile_picture:
 ---
 
 
-<div style="display: flex;">
+<div style="display: flex; flex-direction: column;">
   <h1 class="home-description">Jeongin Park</h1>
+  <p class="home-subtitle">Master's Student, Seoul National University</p>
+</div>
+<div style="display: flex;">
   <!-- Social & Contact Links -->
   <div class="contact-links">
     <a href="mailto:parkjeong02@gmail.com" title="Email">
