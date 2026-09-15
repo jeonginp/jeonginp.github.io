@@ -20,11 +20,7 @@
     {% endif %}
 
     <span class="publication-text">
-      {% if item.doi %}
-        <a href="https://doi.org/{{ item.doi }}" target="_blank" class="publication-title">{{ item.title }}</a>
-      {% else %}
-        <span class="publication-title">{{ item.title }}</span>
-      {% endif %}
+      <span class="publication-title">{{ item.title }}</span>
       <br>
       <em class="publication-authors">{{ item.authors | replace: "Jeongin Park", "<u>Jeongin Park</u>" }}</em>
       <br>
