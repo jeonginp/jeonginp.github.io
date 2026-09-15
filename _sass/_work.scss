@@ -53,6 +53,11 @@
   cursor: pointer;
 }
 
+.video-preview .video-thumbnail {
+  float: none;
+  margin: 0;
+}
+
 .video-preview:hover .play-button {
   background-color: rgba(0, 0, 0, 0.8);
   transform: translate(-50%, -50%) scale(1.1);
@@ -79,12 +84,15 @@
 .publication-title {
   font-size: 1em;
   font-weight: 400;
-  color: #333;
+}
+
+a.publication-title {
+  color: #333 !important;
   text-decoration: none;
 }
 
 a.publication-title:hover {
-  color: #333;
+  color: #333 !important;
   text-decoration: underline;
 }
 
