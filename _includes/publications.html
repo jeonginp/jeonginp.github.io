@@ -10,7 +10,11 @@
     {% endif %}
 
     <span class="publication-text">
-      <span class="publication-title">{{ item.title }}</span>
+      {% if item.doi %}
+        <a href="https://doi.org/{{ item.doi }}" target="_blank" class="publication-title">{{ item.title }}</a>
+      {% else %}
+        <span class="publication-title">{{ item.title }}</span>
+      {% endif %}
       <br>
       <em class="publication-authors">{{ item.authors | replace: "Jeongin Park", "<u>Jeongin Park</u>" }}</em>
       <br>
@@ -32,6 +36,9 @@
         {% if item.website %}
           <a href="{{ item.website }}" target="_blank">Website</a>
         {% endif %}
+        {% if item.video %}
+          <a href="javascript:void(0)" class="video-link" data-video="{{ item.video }}" onclick="openVideoModal(this)">Video</a>
+        {% endif %}
         {% if item.abstract and item.abstract != "" %}
           <a href="javascript:void(0)" class="abstract-toggle" onclick="toggleAbstract(this)">Abstract</a>
         {% endif %}
@@ -45,3 +52,48 @@
   </div>
   {% endfor %}
 </div>
+
+<!-- Video Modal -->
+<div id="video-modal" class="video-modal" onclick="closeVideoModal(event)">
+  <div class="video-modal-content">
+    <span class="video-modal-close" onclick="closeVideoModal()">&times;</span>
+    <iframe id="video-iframe" src="" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+  </div>
+</div>
+
+<script>
+function getYouTubeEmbedUrl(url) {
+  let videoId = '';
+  if (url.includes('youtube.com/watch')) {
+    videoId = url.split('v=')[1];
+    const ampPos = videoId.indexOf('&');
+    if (ampPos !== -1) videoId = videoId.substring(0, ampPos);
+  } else if (url.includes('youtu.be/')) {
+    videoId = url.split('youtu.be/')[1];
+    const queryPos = videoId.indexOf('?');
+    if (queryPos !== -1) videoId = videoId.substring(0, queryPos);
+  }
+  return 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
+}
+
+function openVideoModal(element) {
+  const videoUrl = element.getAttribute('data-video');
+  const embedUrl = getYouTubeEmbedUrl(videoUrl);
+  document.getElementById('video-iframe').src = embedUrl;
+  document.getElementById('video-modal').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeVideoModal(event) {
+  if (event && event.target !== document.getElementById('video-modal') && !event.target.classList.contains('video-modal-close')) {
+    return;
+  }
+  document.getElementById('video-modal').style.display = 'none';
+  document.getElementById('video-iframe').src = '';
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeVideoModal();
+});
+</script>

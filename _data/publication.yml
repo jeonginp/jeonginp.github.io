@@ -5,6 +5,7 @@
   doi: 10.1109/PacificVis68791.2026.00014
   pdf: /assets/pdf/directvis.pdf
   abstract: "Visualization authoring novices often rely on large language model (LLM)-supported tools for code-based chart editing. However, it can be difficult for novices to precisely articulate what to change and how in natural language, which can make chart editing inefficient; e.g., requiring multiple rounds of iterative revisions. To address this problem, we propose DirectVis, a visualization editing system that integrates direct manipulation with code-based editing. Using DirectVis, users can clarify how a visualization should be edited by directly manipulating chart components. This interaction can be interpreted as users’ demonstration of their intended edits to the system. A user study verifies that our system facilitates the precise delivery of user intent, thereby improving the efficiency of chart editing compared to natural-language-based systems. Based on our findings, we derive design implications for future visualization editing tools."
+  video: https://youtu.be/hLz1Ec_WhlY
 
 - title: Stop Misusing t-SNE and UMAP for Visual Analytics
   authors: Hyeon Jeon, Jeongin Park, Sungbok Shin, and Jinwook Seo
