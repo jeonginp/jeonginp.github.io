@@ -5,8 +5,10 @@ function toggleAbstract(element) {
   var abstractDiv = element.closest('.publication-text').querySelector('.publication-abstract');
   if (abstractDiv.style.display === 'none') {
     abstractDiv.style.display = 'block';
+    element.classList.add('active');
   } else {
     abstractDiv.style.display = 'none';
+    element.classList.remove('active');
   }
 }
 </script>

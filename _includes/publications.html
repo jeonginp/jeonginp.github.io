@@ -1,7 +1,17 @@
 <div class="publications-list">
   {% for item in site.data.publication %}
   <div class="publication-item">
-    {% if item.teaser %}
+    {% if item.video %}
+    <div class="video-preview" data-video="{{ item.video }}" onclick="openVideoModal(this)">
+      <img
+        src=""
+        alt="{{ item.title }}"
+        class="publication-teaser video-thumbnail"
+        data-video="{{ item.video }}"
+      />
+      <div class="play-button">&#9658;</div>
+    </div>
+    {% elsif item.teaser %}
     <img
       src="{{ item.teaser | absolute_url }}"
       alt="{{ item.title }}"
@@ -36,9 +46,6 @@
         {% if item.website %}
           <a href="{{ item.website }}" target="_blank">Website</a>
         {% endif %}
-        {% if item.video %}
-          <a href="javascript:void(0)" class="video-link" data-video="{{ item.video }}" onclick="openVideoModal(this)">Video</a>
-        {% endif %}
         {% if item.abstract and item.abstract != "" %}
           <a href="javascript:void(0)" class="abstract-toggle" onclick="toggleAbstract(this)">Abstract</a>
         {% endif %}
@@ -62,7 +69,7 @@
 </div>
 
 <script>
-function getYouTubeEmbedUrl(url) {
+function getYouTubeVideoId(url) {
   let videoId = '';
   if (url.includes('youtube.com/watch')) {
     videoId = url.split('v=')[1];
@@ -73,12 +80,28 @@ function getYouTubeEmbedUrl(url) {
     const queryPos = videoId.indexOf('?');
     if (queryPos !== -1) videoId = videoId.substring(0, queryPos);
   }
-  return 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
+  return videoId;
 }
 
+function getYouTubeEmbedUrl(url) {
+  return 'https://www.youtube.com/embed/' + getYouTubeVideoId(url) + '?autoplay=1';
+}
+
+function getYouTubeThumbnail(url) {
+  return 'https://img.youtube.com/vi/' + getYouTubeVideoId(url) + '/hqdefault.jpg';
+}
+
+// Set thumbnails on page load
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.video-thumbnail').forEach(function(img) {
+    var videoUrl = img.getAttribute('data-video');
+    img.src = getYouTubeThumbnail(videoUrl);
+  });
+});
+
 function openVideoModal(element) {
-  const videoUrl = element.getAttribute('data-video');
-  const embedUrl = getYouTubeEmbedUrl(videoUrl);
+  var videoUrl = element.getAttribute('data-video');
+  var embedUrl = getYouTubeEmbedUrl(videoUrl);
   document.getElementById('video-iframe').src = embedUrl;
   document.getElementById('video-modal').style.display = 'flex';
   document.body.style.overflow = 'hidden';
