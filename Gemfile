@@ -22,3 +22,9 @@ end
 gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 
 gem "webrick", "~> 1.9"
+
+# Ruby 4.0 compatibility
+gem "csv"
+gem "base64"
+gem "bigdecimal"
+gem "logger"

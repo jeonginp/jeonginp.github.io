@@ -20,7 +20,11 @@
       "Bash(gcc:*)",
       "Bash(gem list:*)",
       "Bash(softwareupdate:*)",
-      "Bash(rbenv versions:*)"
+      "Bash(rbenv versions:*)",
+      "Bash(ls:*)",
+      "Bash(sudo rm -rf /Library/Developer/CommandLineTools)",
+      "Bash(clang:*)",
+      "Bash(brew reinstall:*)"
     ]
   }
 }

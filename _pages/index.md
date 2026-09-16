@@ -6,12 +6,8 @@ profile_picture:
   alt: website picture
 ---
 
-
-<div style="display: flex; flex-direction: column;">
-  <h1 class="home-description">Jeongin Park</h1>
-  <p class="home-subtitle">Master's Student, Seoul National University</p>
-</div>
-<div style="display: flex;">
+<div class="profile-section" style="float: right; text-align: center; margin-left: 30px; margin-bottom: 20px;">
+  <img src="/assets/img/profile-pic.jpg" alt="website picture" class="profile-pic" style="float: none; margin-left: 0;" />
   <!-- Social & Contact Links -->
   <div class="contact-links">
     <a href="mailto:parkjeong02@gmail.com" title="Email">
@@ -28,6 +24,14 @@ profile_picture:
     </a>
   </div>
 </div>
+
+<div style="display: flex; flex-direction: column;">
+  <h1 class="home-description">Jeongin Park</h1>
+  <p class="home-subtitle">Master's Student, Seoul National University</p>
+</div>
+
+<div style="height: 0.5em;"></div>
+
 I design and study human–AI interfaces that help people interact with complex visual, auditory, and generative information more intuitively and adaptively.
 
 I am currently a Master’s student in the [HCI Lab](http://hcil.snu.ac.kr/) at Seoul National University (SNU), advised by [Prof. Jinwook Seo](https://hcil.snu.ac.kr/people/jinwook-seo). I received my B.S. in Computer Science and Engineering and Mathematical Sciences from Seoul National University, supported by the Presidential Science Scholarship.

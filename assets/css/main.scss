@@ -7,7 +7,7 @@
 // Our variables
 $base-url: "{{ site.baseurl }}";
 
-$base-font-family: "Open Sans", sans-serif;
+$base-font-family: "Inter", sans-serif;
 $base-font-size: 15px;
 $small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.55;
@@ -43,8 +43,8 @@ $on-laptop: 800px;
 .home-description {
   margin-right: 20px;
   margin-bottom: 0;
-  font-family: "Open Sans", sans-serif !important;
-  font-weight: 300;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 700;
 }
 
 .home-subtitle {
@@ -82,7 +82,8 @@ hr {
 .section {
   margin-bottom: 0px;
   font-size: 1.3em;
-  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
   line-height: 1.5;
 }
 
