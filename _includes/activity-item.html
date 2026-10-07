@@ -1,0 +1,45 @@
+<div class="activity-item">
+    {% include work-item.html 
+        title=item.title 
+        date=item.date 
+        description=item.description 
+        image=item.image 
+        url=item.url 
+        presentation=item.presentation 
+        github=item.github 
+        website=item.website 
+      %}
+
+    <!-- Swiper 슬라이드 섹션 -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            {% assign image_directory = item.image %}
+            {% assign image_files = site.static_files %}
+            
+            {% for image in image_files %}
+                {% if image.path contains image_directory and (image.extname == ".jpg" or image.extname == ".JPG" or image.extname == ".jpeg" or image.extname == ".JPEG" or image.extname == ".png") %}
+                <div class="swiper-slide">
+                    <img src="{{ image.path | absolute_url }}">
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        navigation: {
+            loop: true,
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
+    </script>
+</div>

@@ -1,0 +1,45 @@
+<div class="projects-list">
+  {% for item in site.data.project %}
+  <div class="publication-item">
+    {% if item.image.src %}
+    <img
+      src="{{ item.image.src | absolute_url }}"
+      alt="{{ item.image.alt }}"
+      class="work-bubble"
+    />
+    {% endif %}
+
+    <span class="publication-text">
+      <span class="publication-title">
+        {% if item.url %}
+        <a href="{{ item.url | relative_url }}" class="custom-link">{{ item.title }}</a>
+        {% else %}
+        {{ item.title }}
+        {% endif %}
+      </span>
+      <br>
+      <span class="publication-status">{{ item.date }}</span>
+      <br>
+      {{ item.description }}
+
+      <div class="work-links">
+        {% if item.presentation %}
+          <a href="{{ item.presentation | relative_url }}" target="_blank" title="Presentation">
+            <i class="fas fa-file-powerpoint"></i>
+          </a>
+        {% endif %}
+        {% if item.github %}
+          <a href="{{ item.github }}" target="_blank" title="GitHub Repository">
+            <i class="fab fa-github"></i>
+          </a>
+        {% endif %}
+        {% if item.website %}
+          <a href="{{ item.website }}" target="_blank" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+        {% endif %}
+      </div>
+    </span>
+  </div>
+  {% endfor %}
+</div>

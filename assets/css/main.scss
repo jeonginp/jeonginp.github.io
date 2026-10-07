@@ -1,0 +1,357 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+// Our variables
+$base-url: "{{ site.baseurl }}";
+
+$base-font-family: "Inter", sans-serif;
+$base-font-size: 15px;
+$small-font-size: $base-font-size * 0.875;
+$base-line-height: 1.55;
+
+$spacing-unit: 30px;
+
+$text-color: #111;
+$background-color: #fdfdfd;
+$brand-color: #5673C2;
+$brand-color-light: #95B2F7;
+
+$grey-color: #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark: darken($grey-color, 25%);
+
+$on-mobile: 500px;
+$on-laptop: 800px;
+
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "base", "layout", "site", "work", "blog", "post", "404";
+
+.contact-links {
+  margin-top: 0.3em;
+  margin-left: 15px;
+}
+
+.home-description {
+  margin-right: 20px;
+  margin-bottom: 0;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 700;
+}
+
+.home-subtitle {
+  font-size: 1em;
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.contact-links a {
+  font-size: 1.2em; /* 아이콘 크기 조절 */
+  color: #333; /* 아이콘 색상 */
+  margin-right: 15px; /* 아이콘 간격 */
+  text-decoration: none;
+}
+
+.contact-links a:hover {
+  color: #95B2F7; /* 호버 색상 */
+}
+
+.page-content {
+  margin: 0 auto;
+  padding: 48px 20px 20px;
+  max-width: 1200px;
+}
+
+/* 섹션 구분선 */
+hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 10 10;
+}
+
+/* 각 섹션의 박스 스타일 */
+.section {
+  margin-bottom: 0px;
+  font-size: 1.3em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.home-section + .home-section {
+  margin-top: 1.5rem;
+}
+
+.section strong {
+  color: #222;
+}
+
+.section em {
+  color: #555;
+}
+
+.section .details {
+  margin-left: 15px;
+  font-size: 1em;
+  color: #666;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  // text-align: center;
+}
+
+h2 {
+  margin-bottom: 0; /* 기존 값에서 간격을 줄임 */
+  font-size: 1.3em;
+}
+
+.date {
+  float: right;
+  color: #888;
+  font-size: 0.8em;
+}
+
+.position {
+  // font-weight: bold;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.advisor {
+  font-style: italic;
+  font-size: 0.8em;
+  color: #555;
+  margin-left: 5px;
+}
+
+.details {
+  font-size: 0.8em;
+  color: #888;
+  margin-top: 5px;
+  display: block;
+}
+
+/* 팝업 스타일 */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px;
+  justify-content: center; /* 카드가 중앙 정렬되도록 */
+}
+
+
+/* 카드 스타일 */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 6px;
+  width: 230px;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+/* 카드 hover 효과 */
+.card:hover {
+  // background-color: #f0f0f0; /* 배경 하이라이트 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 그림자 색 변경 */
+  // transform: translateY(-5px); /* 약간 위로 튀어오르는 효과 */
+  // 크기를 살짝 늘리기
+  transform: scale(1.01);
+}
+/* 카드 이미지 */
+.card-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* 카드 내용 */
+.card-content {
+  padding: 12px;
+  padding-bottom: 50px; /* 링크와 날짜를 위한 여백 추가 */
+}
+
+.card-title {
+  font-size: 1em;
+  margin-bottom: 6px;
+}
+
+.card-tags {
+  font-size: 0.85em;
+  color: #555;
+  margin-top: 4px;
+}
+
+
+/* 링크와 날짜 영역 스타일 */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  // background-color: #f9f9f9;
+  // border-top: 1px solid #ddd;
+  overflow: hidden; /* 링크가 오른쪽으로 벗어나지 않도록 설정 */
+  box-sizing: border-box; /* padding 포함하여 너비 계산 */
+}
+
+/* 링크 아이콘 */
+.card-links {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end; /* 링크를 오른쪽 정렬 */
+  flex-grow: 1;
+}
+
+
+.card-links a {
+  color: #333;
+  font-size: 1.2em;
+}
+
+.card-links a:hover {
+  color: #007acc;
+}
+
+/* 날짜 스타일 */
+.card-date {
+  font-size: 0.85em;
+  color: #777;
+  text-align: right;
+}
+
+.custom-link {
+  color: #333;
+  text-decoration: none;
+}
+
+.custom-link:hover {
+  color: #5673C2; /* 호버 색상 */
+}
+
+.activity-info {
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activity-info h1 {
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+.activity-info p {
+  color: #666;
+  font-size: 1em;
+}
+.swiper {
+  width: 100%;
+  max-height: 250px; /* 슬라이드 높이 설정 */
+  overflow: hidden; /* 전체 슬라이드 영역에서 넘치는 요소 숨기기 */
+  margin-top: -2em; /* 슬라이드 간격 조정 */
+  padding-bottom: 3em;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  padding: 5 5 5 5;
+  width: 100%;
+  // max-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* 슬라이드 안에서 넘치는 이미지 숨기기 */
+}
+
+.swiper-slide img {
+  width: auto;
+  height: 100%; /* 높이를 컨테이너에 맞추고, 비율 유지 */
+  max-height: 250px; /* 이미지 최대 높이 설정 */
+  object-fit: contain; /* 이미지 전체가 보이도록 설정 */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #555; /* 버튼 색상 설정 */
+  font-size: 16px; /* 버튼 아이콘 크기 조정 */
+  /* 이미지 중앙 정렬 */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* 버튼 호버 시 효과 */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #95B2F7;
+}
+
+// /* 버튼을 이미지 옆으로 이동 */
+// .swiper-button-prev {
+//   left: -40px; /* 왼쪽 버튼을 이미지 바깥쪽으로 이동 */
+// }
+
+// .swiper-button-next {
+//   right: -40px; /* 오른쪽 버튼을 이미지 바깥쪽으로 이동 */
+// }
+
+.pdf-container {
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}

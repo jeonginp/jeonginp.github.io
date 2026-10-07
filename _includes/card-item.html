@@ -1,0 +1,40 @@
+<!-- <div class="card" onclick="openPopup('{{ include.title | escape }}', '{{ include.date | escape }}', '{{ include.description | escape }}', '{{ include.url | escape }}', '{{ include.location | escape }}')"> -->
+
+<div class="card" onclick="window.location.href='{{ include.url | escape }}'">
+    {% if include.image.src %}
+      <img src="{{ include.image.src | absolute_url }}" alt="{{ include.image.alt }}" class="card-image">
+    {% endif %}
+  
+    <div class="card-content">
+      <h3 class="card-title">{{ include.title }}</h3>   
+    </div>
+  
+    <!-- 카드 하단 링크와 날짜 -->
+    <div class="card-footer"> 
+        {% if item.tags %}
+            <p class="card-tags">
+                {% for tag in item.tags %}
+                #{{ tag }}{% if forloop.last == false %}{% endif %}
+                {% endfor %}
+            </p> <!-- 태그 표시 -->
+        {% endif %}          
+      <div class="card-links">
+        {% if include.presentation %}
+          <a href="{{ include.presentation | relative_url }}" target="_blank" title="Presentation">
+            <i class="fas fa-file-powerpoint"></i>
+          </a>
+        {% endif %}
+        {% if include.github %}
+          <a href="{{ include.github }}" target="_blank" title="GitHub Repository">
+            <i class="fab fa-github"></i>
+          </a>
+        {% endif %}
+        {% if include.website %}
+          <a href="{{ include.website }}" target="_blank" title="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  

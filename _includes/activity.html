@@ -1,0 +1,16 @@
+<div class="activity-container">
+    {% for item in site.data.extracurricular %}
+      {% include activity-item.html 
+        title=item.title 
+        date=item.date 
+        description=item.description 
+        image=item.image 
+        url=item.url 
+        presentation=item.presentation 
+        github=item.github 
+        website=item.website 
+        tags=item.tags
+      %}
+      {% endfor %}
+  </div>
+  

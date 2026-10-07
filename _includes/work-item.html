@@ -1,0 +1,51 @@
+<div class="work-item">
+    {% if include.image.src %}
+    <img
+      src="{{ include.image.src | absolute_url }}"
+      alt="{{ include.image.alt }}"
+      class="work-bubble"
+    />
+    {% endif %}
+
+    <span class="work-text">
+      <span class="work-title">
+        {% if include.url %}
+        <a href="{{ include.url | relative_url }}" class="custom-link">{{ include.title }}</a>
+        {% else %}
+          {{ include.title }}
+        {% endif %}
+      </span>
+      <br>
+      {% if include.organization %}
+        <span class="work-organization">{{ include.organization }}</span>
+        <br>
+      {% endif %}
+      {% if include.location %}
+        <span class="work-location">{{ include.location }}</span>
+        <br>
+      {% endif %}
+      <em class="work-date">{{ include.date }}</em>
+      <br>
+      {{ include.description }}
+  
+      <!-- Links with icons -->
+      <div class="work-links">
+        {% if include.presentation %}
+          <a href="{{ include.presentation | relative_url }}" target="_blank" title="Presentation">
+            <i class="fas fa-file-powerpoint"></i> <!-- Presentation icon -->
+          </a>
+        {% endif %}
+        {% if include.github %}
+          <a href="{{ include.github }}" target="_blank" title="GitHub Repository">
+            <i class="fab fa-github"></i> <!-- GitHub icon -->
+          </a>
+        {% endif %}
+        {% if include.website %}
+          <a href="{{ include.website }}" target="_blank" title="Website">
+            <i class="fas fa-globe"></i> <!-- Website icon -->
+          </a>
+        {% endif %}
+      </div>
+    </span>
+  </div>
+  

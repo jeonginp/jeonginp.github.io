@@ -1,0 +1,16 @@
+<div class="card-container">
+  {% for item in site.data.research %}
+    {% include work-item.html
+      title=item.title
+      organization=item.organization
+      location=item.location
+      date=item.date
+      description=item.description
+      image=item.image
+      url=item.url
+      presentation=item.presentation
+      github=item.github
+      website=item.website
+    %}
+  {% endfor %}
+</div>

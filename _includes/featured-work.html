@@ -1,0 +1,15 @@
+<div class="card-container">
+  {% for item in site.data.featured-work %}
+    {% include card-item.html 
+      title=item.title 
+      date=item.date 
+      description=item.description 
+      image=item.image 
+      url=item.url 
+      presentation=item.presentation 
+      github=item.github 
+      website=item.website 
+      tags=item.tags
+    %}
+    {% endfor %}
+</div>

@@ -1,0 +1,17 @@
+{% for exp in site.data.experience %}
+<div class="experience-item">
+  <span class="experience-date">{{ exp.date }}</span>
+  <span class="experience-company">{{ exp.company }}</span>,
+  <span class="experience-location">{{ exp.location }}</span>
+  <br>
+  <span class="experience-title">{{ exp.title }}</span>
+  {% if exp.advisor %}
+    <span class="experience-advisor">(Advisor: {{ exp.advisor }})</span>
+  {% elsif exp.advisors %}
+    <span class="experience-advisor">(Advisors: {{ exp.advisors | join: ", " }})</span>
+  {% endif %}
+  {% if exp.details %}
+    <br><span class="experience-details">{{ exp.details }}</span>
+  {% endif %}
+</div>
+{% endfor %}

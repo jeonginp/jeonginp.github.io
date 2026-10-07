@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+
+  <body>
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="work">
+          <h1 class="page-heading">{{ page.title }}</h1>
+          {% for item in page.items %}
+          <div class="work-item">
+            {% if item.image.src %}
+            <img
+              src="{{ item.image.src | absolute_url }}"
+              alt="{{ item.image.alt }}"
+              class="work-bubble"
+            />
+            {% endif %}
+
+            <span class="work-text">
+              <strong class="work-title">
+                {% if item.url %}
+                  <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                {% else %}
+                  {{ item.title }}
+                {% endif %}
+              </strong>
+              <br>
+              <em class="work-date">{{ item.date }}</em>
+              <br>
+              {{ item.description }}
+
+              <!-- Links with icons -->
+              <div class="work-links">
+                {% if item.presentation %}
+                  <a href="{{ item.presentation | relative_url }}" target="_blank" title="Presentation">
+                    <i class="fas fa-file-powerpoint"></i> <!-- Presentation icon -->
+                  </a>
+                {% endif %}
+                {% if item.github %}
+                  <a href="{{ item.github }}" target="_blank" title="GitHub Repository">
+                    <i class="fab fa-github"></i> <!-- GitHub icon -->
+                  </a>
+                {% endif %}
+                {% if item.website %}
+                  <a href="{{ item.website }}" target="_blank" title="Website">
+                    <i class="fas fa-globe"></i> <!-- Website icon -->
+                  </a>
+                {% endif %}
+              </div>
+            </span>
+          </div>
+          {% endfor %}
+          {{ content }}
+        </div>
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+    {% include foot.html %}
+  </body>
+</html>

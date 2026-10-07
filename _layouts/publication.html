@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+
+  <body>
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="publications">
+          <h3 class="page-heading">{{ page.title }}</h3>
+          {{ content }}
+
+          {% for item in site.data.publication %}
+          <div class="publication-item">
+            {% if item.teaser %}
+            <img
+              src="{{ item.teaser | absolute_url }}"
+              alt="{{ item.title }}"
+              class="publication-teaser"
+            />
+            {% endif %}
+
+            <span class="publication-text">
+              <span class="publication-title">{{ item.title }}</span>
+              <br>
+              <em class="publication-authors">{{ item.authors | replace: "Jeongin Park", "<u>Jeongin Park</u>" }}</em>
+              <br>
+              <span class="publication-status">{{ item.status }}</span>
+              <br>
+              {{ item.description }}
+
+              <!-- Links -->
+              <div class="publication-links">
+                {% if item.pdf %}
+                  <a href="{{ item.pdf | relative_url }}" target="_blank">PDF</a>
+                {% endif %}
+                {% if item.arxiv %}
+                  <a href="{{ item.arxiv }}" target="_blank">arXiv</a>
+                {% endif %}
+                {% if item.doi %}
+                  <a href="https://doi.org/{{ item.doi }}" target="_blank">DOI</a>
+                {% endif %}
+                {% if item.website %}
+                  <a href="{{ item.website }}" target="_blank">Website</a>
+                {% endif %}
+                {% if item.abstract and item.abstract != "" %}
+                  <a href="javascript:void(0)" class="abstract-toggle" onclick="toggleAbstract(this)">Abstract</a>
+                {% endif %}
+              </div>
+              {% if item.abstract and item.abstract != "" %}
+              <div class="publication-abstract" style="display: none;">
+                {{ item.abstract }}
+              </div>
+              {% endif %}
+            </span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+    {% include foot.html %}
+
+    <script>
+    function toggleAbstract(element) {
+      var abstractDiv = element.closest('.publication-text').querySelector('.publication-abstract');
+      if (abstractDiv.style.display === 'none') {
+        abstractDiv.style.display = 'block';
+      } else {
+        abstractDiv.style.display = 'none';
+      }
+    }
+    </script>
+  </body>
+</html>

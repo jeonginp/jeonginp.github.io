@@ -1,0 +1,21 @@
+<div id="popup" class="popup-overlay" onclick="closePopup()">
+    <div class="popup-content" onclick="event.stopPropagation()">
+      <span class="popup-close" onclick="closePopup()">×</span>
+      <h3 id="popup-title"></h3>
+      <p id="popup-location"></p>
+      <p id="popup-date"></p>
+      <p id="popup-description"></p>
+      For more details, visit the <a id="popup-url">project page</a>.
+    </div>
+  </div>
+  <style>
+    #popup-url {
+      color: #111; /* 링크 색상 */
+      text-decoration: underline; /* 밑줄 */
+    }
+    #popup-url:hover {
+      color: #5673C2; /* 마우스를 올렸을 때 색상 */
+      text-decoration: underline; /* 마우스를 올렸을 때 밑줄 제거 */
+    }
+  </style>
+  

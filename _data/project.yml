@@ -1,0 +1,49 @@
+  - title: VR-Based Geometry Learning Application (PI, 20M KRW Grant)
+    # image:
+    #   src: /assets/img/projects/demo1.png
+    #   alt: VR-Geometry-Education
+    date: Dec 2024 - May 2025
+    description: Developed an immersive Vision Pro–based VR learning app for 3D geometry education, featuring intuitive cube manipulation, projection-based visualization, and curriculum-aligned problem solving—funded through an independently secured 20M KRW grant. 
+    url: /projects/vr-education
+
+  - title: SNU Social Responsibility "For All" Project
+    date: Mar 2025 - Jun 2025
+    description: Developed a mobile application to support independent museum and exhibition visits for individuals with visual impairments. Designed and implemented a computer vision-based indoor localization system and a user-centered navigation interface.
+
+  - title: BugRider - 3D Adventure Game Development
+    date: Mar 2025 - Jun 2025
+    description: Led a five-member development team, overseeing project planning, task allocation, and development schedule management. Created 3D assets and animations using Blender, and developed game controls and audio systems in Unity.
+  
+  - title: Question-Answer-and-Connect
+    image:
+      src: /assets/img/projects/demo1.png
+      alt: QuAC
+    date: Mar 2024 - June 2024
+    description: Developed a web app enabling interactive question-answer sessions with keyword-based navigation, enhancing user engagement through intuitive design. Integrated OpenAI’s API for dynamic, intelligent responses.
+    github: https://github.com/ZzeongB/Question-Answer-and-Connect
+    presentation: /assets/img/projects/QuAC.pdf
+    url: /projects/question-answer-and-connect
+  
+  - title: Ko-Radiology-GPT
+    image:
+      src: /assets/img/projects/demo2.png
+      alt: Ko-GPT
+    date: Mar 2024 - Jun 2024
+    description: Built a Korean-language GPT model for real-time Q&A on radiology reports, leveraging translated datasets to assist medical professionals in Korean. This model improves access to specialized medical information in the Korean language.
+    github: https://github.com/ZzeongB/Ko-Radiology-GPT
+    url: /projects/ko-radiology-gpt
+
+  - title: MAPSEE – A Map-Based Journal App
+    image:
+      src: /assets/img/projects/mapsee.png
+      alt: mapsee
+    date: Sep 2022 - Aug 2023
+    description: Led front-end development in Team Happetite to launch MAPSEE, a map-based journal app, on the App Store. Implemented interactive maps and enhanced the user experience. Conducted training sessions for junior developers, fostering their skills in front-end development and collaborative project work.
+    github: https://github.com/Happetite-app-dev/mapsee
+    url: /projects/mapsee
+    
+  - title: Lecture Review Analysis with LSTM
+    date: Mar 2022 - Jun 2022
+    description: Conducted an AI project analyzing lecture reviews using LSTM to identify sentiment and recurring feedback themes. This analysis provided insights into student experiences, assisting in targeted course improvements.
+    presentation: /assets/img/projects/LSTM.pdf
+    url: /projects/lecture-review-analysis-with-lstm
