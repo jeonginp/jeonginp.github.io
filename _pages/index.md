@@ -7,7 +7,10 @@ profile_picture:
 ---
 
 <div class="profile-section" style="float: right; text-align: center; margin-left: 30px; margin-bottom: 20px;">
-  <img src="/assets/img/profile-pic.jpg" alt="website picture" class="profile-pic" style="float: none; margin-left: 0;" />
+  <div class="profile-pic-container">
+    <img src="/assets/img/profile-pic.jpg" alt="website picture" class="profile-pic profile-pic-1" />
+    <img src="/assets/img/profile-pic2.JPG" alt="website picture" class="profile-pic profile-pic-2" />
+  </div>
   <!-- Social & Contact Links -->
   <div class="contact-links">
     <a href="javascript:void(0)" onclick="copyEmail()" title="Email" style="position: relative;">

@@ -1,17 +1,61 @@
+.profile-pic-container {
+  position: relative;
+  width: 202px;
+  height: 202px;
+  margin: 0 auto;
+}
+
 .profile-pic {
-  float: right;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 202px !important;
   height: 202px !important;
   object-fit: cover !important;
   object-position: center 40% !important;
   border-radius: 50% !important;
   border: #ccc 1px solid;
-  margin-left: 20px;
 
   @include media-query($on-mobile) {
     float: none;
     margin-bottom: 20px;
     margin-left: 0px;
+  }
+}
+
+.profile-pic-1 {
+  animation: fadeInOut1 10s ease-in-out infinite;
+}
+
+.profile-pic-2 {
+  animation: fadeInOut2 10s ease-in-out infinite;
+}
+
+@keyframes fadeInOut1 {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInOut2 {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  50%,
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
@@ -93,5 +137,5 @@
 }
 
 .contact-links a:hover {
-  color: #95B2F7; /* 호버 색상 */
+  color: #95b2f7; /* 호버 색상 */
 }
