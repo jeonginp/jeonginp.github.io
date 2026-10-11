@@ -31,19 +31,19 @@ profile_picture:
 
 <div style="display: flex; flex-direction: column;">
   <h1 class="home-description">Jeongin Park</h1>
-  <p class="home-subtitle">Master's Student, Seoul National University</p>
+  <p class="home-subtitle">PhD applicant for Fall 2027 | Master's Student at Seoul National University</p>
 </div>
 
 <div style="height: 0.5em;"></div>
 
 I am interested in Human-AI interaction in extended reality (XR) that augments people's abilities in everyday activities, situated in the 3D physical world.
 
-
 I am currently a Master’s student in the [HCI Lab](http://hcil.snu.ac.kr/) at Seoul National University (SNU), advised by [Prof. Jinwook Seo](https://hcil.snu.ac.kr/people/jinwook-seo). I received my B.S. in Computer Science and Engineering and Mathematical Sciences from Seoul National University, fully funded by the Presidential Science Scholarship.
 
 From January to July 2026, I was a visiting intern at the [Augmented Perception Lab](https://augmented-perception.org/) at Carnegie Mellon University, collaborating with [Prof. David Lindlbauer](https://www.davidlindlbauer.com). I also have research and industry experience at [Lunit Inc.](https://www.lunit.io/) and the [Max Planck Institute](https://www.mpcdf.mpg.de/).
 
 My previous work lies at the intersection of Visualization, Human-AI interaction, and wearable interactions and XR.
+
 <div style="text-align: center;">
   <img src="/assets/img/PrevWork.png" alt="Research Overview" style="max-width: 700px; width: 100%;" />
 </div>
@@ -54,7 +54,6 @@ My previous work lies at the intersection of Visualization, Human-AI interaction
 <h2 class="section">Publications</h2>
 {% include publications.html %}
 </div>
-
 
 <div id="education" class="home-section">
 <h2 class="section">Education</h2>
