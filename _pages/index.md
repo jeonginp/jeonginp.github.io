@@ -17,7 +17,7 @@ profile_picture:
       <i class="fas fa-envelope"></i>
       <span id="copy-tooltip" style="display: none; position: absolute; top: -30px; left: 50%; transform: translateX(-50%); background: #333; color: #fff; padding: 4px 8px; border-radius: 4px; font-size: 12px; white-space: nowrap;">Copied!</span>
     </a>
-    <a href="/curriculum-vitae" target="_blank" title="View CV">
+    <a href="/assets/pdf/CV_JeonginPark.pdf" target="_blank" title="View CV">
         CV
     </a>
     <a href="https://scholar.google.com/citations?user=5P0SThgAAAAJ" target="_blank" title="Google Scholar">
