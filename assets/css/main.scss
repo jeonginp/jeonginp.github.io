@@ -54,7 +54,7 @@ $on-laptop: 800px;
   margin-bottom: 0;
 
   @include media-query($on-mobile) {
-    span {
+    span:not(.mobile-hide) {
       display: block;
     }
   }
