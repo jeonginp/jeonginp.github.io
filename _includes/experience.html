@@ -1,8 +1,8 @@
 {% for exp in site.data.experience %}
 <div class="experience-item">
   <span class="experience-date">{{ exp.date }}</span>
-  <span class="experience-company">{{ exp.company }}</span>
-  <span class="experience-location">, {{ exp.location }}</span>
+  <span class="experience-company">{{ exp.company }}</span><span class="mobile-hide">, </span>
+  <span class="experience-location">{{ exp.location }}</span>
   <br><span class="experience-title">{{ exp.title }}</span>
   {% if exp.advisor %}
     <br><span class="experience-advisor">Advisor: {{ exp.advisor }}</span>

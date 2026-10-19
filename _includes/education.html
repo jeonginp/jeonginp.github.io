@@ -1,8 +1,8 @@
 {% for edu in site.data.education %}
 <div class="education-item">
   <span class="education-date">{{ edu.date }}</span>
-  <span class="education-institution">{{ edu.institution }}</span>
-  <span class="education-location">, {{ edu.location }}</span>
+  <span class="education-institution">{{ edu.institution }}</span><span class="mobile-hide">, </span>
+  <span class="education-location">{{ edu.location }}</span>
   {% for degree in edu.degrees %}
     <br><span class="education-degree">{{ degree }}</span>
   {% endfor %}

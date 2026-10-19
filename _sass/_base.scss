@@ -197,6 +197,15 @@ pre {
 }
 
 /**
+ * Mobile utilities
+ */
+.mobile-hide {
+  @include media-query($on-mobile) {
+    display: none;
+  }
+}
+
+/**
  * Clearfix
  */
 %clearfix {
