@@ -1,10 +1,12 @@
-- company: Human Computer Interaction Lab, Seoul National University
+- lab: Human Computer Interaction Lab
+  institution: Seoul National University
   location: Seoul, South Korea
   title: Research Assistant
   date: Mar 2024 - Present
   advisor: Prof. Jinwook Seo
 
-- company: Augmented Perception Lab, Carnegie Mellon University
+- lab: Augmented Perception Lab
+  institution: Carnegie Mellon University
   location: Pittsburgh, PA, USA
   title: Visiting Intern
   date: Jan 2026 - Jul 2026
@@ -14,7 +16,7 @@
   location: Seoul, South Korea
   title: Intern
   date: Dec 2023 - Feb 2024
-  advisors: 
+  advisors:
     - Jaewoong Shin
     - Dr. Sergio Pereira
 
@@ -22,11 +24,12 @@
   location: Garching bei München, Germany
   title: Intern
   date: Sep 2023 - Dec 2023
-  advisors: 
+  advisors:
     - Dr. Klaus Reuter
     - Dr. Markus Rampp
 
-- company: Visual Computing Lab, Seoul National University
+- lab: Visual Computing Lab
+  institution: Seoul National University
   location: Seoul, South Korea
   title: Undergraduate Research Opportunities Program
   date: Mar 2023 - Aug 2023

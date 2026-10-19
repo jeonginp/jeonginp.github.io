@@ -31,7 +31,10 @@ profile_picture:
 
 <div style="display: flex; flex-direction: column;">
   <h1 class="home-description">Jeongin Park</h1>
-  <p class="home-subtitle">PhD applicant for Fall 2027 | Master's Student at Seoul National University</p>
+  <p class="home-subtitle">
+    <span>PhD applicant for Fall 2027</span><span class="mobile-hide"> | </span>
+    <span>Master's Student at Seoul National University</span>
+  </p>
 </div>
 
 <div style="height: 0.5em;"></div>

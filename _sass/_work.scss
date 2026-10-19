@@ -414,12 +414,21 @@ a.publication-title:hover {
   }
 }
 
+.experience-institution {
+  font-size: 1em;
+  color: #333;
+
+  @include media-query($on-mobile) {
+    order: 2;
+  }
+}
+
 .experience-location {
   font-size: 1em;
   color: #555;
 
   @include media-query($on-mobile) {
-    order: 2;
+    order: 3;
   }
 }
 
@@ -430,7 +439,7 @@ a.publication-title:hover {
 
   @include media-query($on-mobile) {
     float: none;
-    order: 3;
+    order: 4;
   }
 }
 
@@ -440,7 +449,7 @@ a.publication-title:hover {
   color: #555;
 
   @include media-query($on-mobile) {
-    order: 4;
+    order: 5;
   }
 }
 
@@ -449,7 +458,7 @@ a.publication-title:hover {
   color: #555;
 
   @include media-query($on-mobile) {
-    order: 5;
+    order: 6;
   }
 }
 
@@ -458,6 +467,6 @@ a.publication-title:hover {
   color: #777;
 
   @include media-query($on-mobile) {
-    order: 6;
+    order: 7;
   }
 }

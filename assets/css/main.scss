@@ -52,6 +52,12 @@ $on-laptop: 800px;
   color: #555;
   margin-top: 0;
   margin-bottom: 0;
+
+  @include media-query($on-mobile) {
+    span {
+      display: block;
+    }
+  }
 }
 
 .contact-links a {
