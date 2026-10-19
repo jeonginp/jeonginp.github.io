@@ -201,7 +201,7 @@ pre {
  */
 .mobile-hide {
   @include media-query($on-mobile) {
-    display: none;
+    display: none !important;
   }
 }
 
