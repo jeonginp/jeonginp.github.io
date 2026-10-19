@@ -36,7 +36,7 @@ profile_picture:
 
 <div style="height: 0.5em;"></div>
 
-I am interested in Human-AI interaction in extended reality (XR) that augments people's abilities in everyday activities, situated in the 3D physical world.
+I am interested in designing human-AI interactions that augment people’s abilities in everyday activities in the physical world, using extended reality (XR) and wearable technologies as platforms for exploration.
 
 I am currently a Master’s student in the [HCI Lab](http://hcil.snu.ac.kr/) at Seoul National University (SNU), advised by [Prof. Jinwook Seo](https://hcil.snu.ac.kr/people/jinwook-seo). I received my B.S. in Computer Science and Engineering and Mathematical Sciences from Seoul National University, fully funded by the Presidential Science Scholarship.
 
