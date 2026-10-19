@@ -187,11 +187,23 @@
 .video-preview-scroll {
   width: 350px;
   height: 120px;
+
+  @include media-query($on-mobile) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
 }
 
 .video-preview-scroll .video-thumbnail {
   /* 기본 상태: 구역 2 (가운데) */
   transform: translateX(-112px);
+
+  @include media-query($on-mobile) {
+    transform: none;
+    width: 100% !important;
+    height: auto !important;
+  }
 }
 
 .video-preview-scroll:hover .video-thumbnail {
@@ -325,64 +337,127 @@ a.publication-title:hover {
   clear: both;
   overflow: hidden;
   padding-bottom: 1em;
+
+  @include media-query($on-mobile) {
+    display: flex;
+    flex-direction: column;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .education-institution {
   font-size: 1em;
   font-weight: 400;
+
+  @include media-query($on-mobile) {
+    order: 1;
+  }
 }
 
 .education-location {
   font-size: 1em;
   color: #555;
+
+  @include media-query($on-mobile) {
+    order: 2;
+    &::before {
+      content: none;
+    }
+  }
 }
 
 .education-date {
   font-size: 0.9em;
   color: #777;
   float: right;
+
+  @include media-query($on-mobile) {
+    float: none;
+    order: 3;
+  }
 }
 
 .education-degree {
   font-size: 1em;
   font-style: italic;
   color: #555;
+
+  @include media-query($on-mobile) {
+    order: 4;
+  }
 }
 
 .experience-item {
   clear: both;
   overflow: hidden;
   padding-bottom: 1em;
+
+  @include media-query($on-mobile) {
+    display: flex;
+    flex-direction: column;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .experience-company {
   font-size: 1em;
   font-weight: 400;
+
+  @include media-query($on-mobile) {
+    order: 1;
+  }
 }
 
 .experience-location {
   font-size: 1em;
   color: #555;
+
+  @include media-query($on-mobile) {
+    order: 2;
+  }
 }
 
 .experience-date {
   font-size: 0.9em;
   color: #777;
   float: right;
+
+  @include media-query($on-mobile) {
+    float: none;
+    order: 3;
+  }
 }
 
 .experience-title {
   font-size: 1em;
   font-style: italic;
   color: #555;
+
+  @include media-query($on-mobile) {
+    order: 4;
+  }
 }
 
 .experience-advisor {
   font-size: 0.9em;
   color: #555;
+
+  @include media-query($on-mobile) {
+    order: 5;
+  }
 }
 
 .experience-details {
   font-size: 0.9em;
   color: #777;
+
+  @include media-query($on-mobile) {
+    order: 6;
+  }
 }
