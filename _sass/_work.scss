@@ -32,6 +32,17 @@
   clear: both;
   overflow: hidden;
   padding-bottom: 1em;
+
+  @include media-query($on-mobile) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.publication-text {
+  @include media-query($on-mobile) {
+    order: 1;
+  }
 }
 
 .publication-teaser {
@@ -42,6 +53,15 @@
   max-width: 380px;
   height: auto;
   border-radius: 4px;
+
+  @include media-query($on-mobile) {
+    order: 2;
+    float: none;
+    margin-left: 0;
+    margin-top: 10px;
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 /* Animated teaser containers */
@@ -51,6 +71,14 @@
   margin-bottom: 10px;
   overflow: hidden;
   border-radius: 4px;
+
+  @include media-query($on-mobile) {
+    order: 2;
+    float: none;
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
 }
 
 /* Half scroll: 0~2145px -> 2145px~끝 반복 (stopmisusing) */
@@ -129,6 +157,16 @@
   cursor: pointer;
   overflow: hidden;
   border-radius: 4px;
+
+  @include media-query($on-mobile) {
+    order: 2;
+    float: none;
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
 }
 
 .video-preview .video-thumbnail {
@@ -138,6 +176,11 @@
   float: none;
   margin: 0;
   border-radius: 4px;
+
+  @include media-query($on-mobile) {
+    width: 100% !important;
+    height: auto !important;
+  }
 }
 
 /* DirectVis scroll animation */
