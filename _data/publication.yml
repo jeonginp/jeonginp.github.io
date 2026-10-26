@@ -1,6 +1,6 @@
 - title: "DirectVis: Editing Code-Based Interactive Visualization with Direct Manipulation"
   authors: Jeongin Park, Mingyu An, Hyunseo Yang, Junhyeong Hwangbo, Min Hyeong Kim, Hyeon Jeon, and Jinwook Seo
-  status: In 2026 IEEE 19th Pacific Visualization Conference (PacificVis '26)
+  status: IEEE 19th Pacific Visualization Conference (PacificVis'26)
   teaser: /assets/img/publications/directvis.png
   thumbnail: /assets/img/publications/directvis.png
   scrollType: directvis
@@ -11,7 +11,7 @@
 
 - title: Stop Misusing t-SNE and UMAP for Visual Analytics
   authors: Hyeon Jeon, Jeongin Park, Sungbok Shin, and Jinwook Seo
-  status: IEEE Transactions on Visualization and Computer Graphics (VIS 2026)
+  status: IEEE Transactions on Visualization and Computer Graphics (VIS'26)
   teaser: /assets/img/publications/jeon_stopmisusing.png
   scrollType: half
   arxiv: https://arxiv.org/abs/2506.08725
@@ -20,7 +20,7 @@
 
 - title: Dataset-Adaptive Dimensionality Reduction
   authors: Hyeon Jeon, Jeongin Park, Soohyun Lee, Dae Hyun Kim, Sungbok Shin, and Jinwook Seo
-  status: IEEE Transactions on Visualization and Computer Graphics (VIS 2025)
+  status: IEEE Transactions on Visualization and Computer Graphics (VIS'25)
   teaser: /assets/img/publications/jeon_datasetadaptive.png
   scrollType: thirds
   doi: 10.1109/TVCG.2025.3634784
