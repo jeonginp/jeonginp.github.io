@@ -48,7 +48,10 @@ From January to July 2026, I was a visiting intern at the [Augmented Perception 
 My previous work lies at the intersection of Visualization, Human-AI interaction, and wearable interactions and XR.
 
 <div style="text-align: center;">
-  <img src="/assets/img/PrevWork.png" alt="Research Overview" style="max-width: 700px; width: 100%;" />
+  <picture>
+    <source media="(max-width: 768px)" srcset="assets/img/prevWorkwithFig_horizontal.png" />
+    <img src="assets/img/PrevWorkwithFig.png" alt="Research Overview" style="width: 100%;" />
+  </picture>
 </div>
 
 <br>
