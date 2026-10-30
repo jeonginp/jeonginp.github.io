@@ -49,7 +49,7 @@ My previous work lies at the intersection of Visualization, Human-AI interaction
 
 <div style="text-align: center;">
   <picture>
-    <source media="(max-width: 768px)" srcset="assets/img/prevWorkwithFig_horizontal.png" />
+    <source media="(max-width: 768px)" srcset="assets/img/PrevWorkwithFig_horizontal.png" />
     <img src="assets/img/PrevWorkwithFig.png" alt="Research Overview" style="width: 100%;" />
   </picture>
 </div>
