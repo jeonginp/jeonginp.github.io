@@ -33,14 +33,14 @@
   overflow: hidden;
   padding-bottom: 1em;
 
-  @include media-query($on-mobile) {
+  @include media-query($on-laptop) {
     display: flex;
     flex-direction: column;
   }
 }
 
 .publication-text {
-  @include media-query($on-mobile) {
+  @include media-query($on-laptop) {
     order: 1;
   }
 }
@@ -54,7 +54,7 @@
   height: auto;
   border-radius: 4px;
 
-  @include media-query($on-mobile) {
+  @include media-query($on-laptop) {
     order: 2;
     float: none;
     margin-left: 0;
@@ -72,7 +72,7 @@
   overflow: hidden;
   border-radius: 4px;
 
-  @include media-query($on-mobile) {
+  @include media-query($on-laptop) {
     order: 2;
     float: none;
     margin-left: 0;
@@ -158,14 +158,14 @@
   overflow: hidden;
   border-radius: 4px;
 
-  @include media-query($on-mobile) {
+  @include media-query($on-laptop) {
     order: 2;
     float: none;
     margin-left: 0;
     margin-top: 10px;
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: auto;
   }
 }
 
@@ -177,9 +177,10 @@
   margin: 0;
   border-radius: 4px;
 
-  @include media-query($on-mobile) {
+  @include media-query($on-laptop) {
     width: 100% !important;
     height: auto !important;
+    object-fit: contain;
   }
 }
 
@@ -188,10 +189,10 @@
   width: 350px;
   height: 120px;
 
-  @include media-query($on-mobile) {
+  @include media-query($on-laptop) {
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: auto;
   }
 }
 
@@ -199,10 +200,11 @@
   /* 기본 상태: 구역 2 (가운데) */
   transform: translateX(-112px);
 
-  @include media-query($on-mobile) {
+  @include media-query($on-laptop) {
     transform: none;
     width: 100% !important;
     height: auto !important;
+    object-fit: contain;
   }
 }
 
