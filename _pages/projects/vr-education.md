@@ -1,39 +1,43 @@
 ---
 layout: individual_work
 title: VR-Based Geometry Learning Application
-subtitle: PI, 20M KRW Grant - A Vision Pro-based spatial reasoning learning tool
+subtitle: A Vision Pro–based spatial reasoning learning tool for elementary education
 slug: /projects/vr-education
 permalink: /projects/vr-education/
 date: Dec 2024 - May 2025
+role: Principal Investigator · Funded by an independently secured USD 15,000 grant
 ---
 
-*A Vision Pro–based spatial reasoning learning tool for elementary education*
+### Overview
 
-### Project Overview
+Elementary geometry teaches spatial reasoning with physical stacking cubes, which are hard to scale and offer no feedback on projections. This project built an immersive **Vision Pro** application that teaches 3D geometry through interactive cube manipulation, projection-based visualization, and curriculum-aligned problem solving.
 
-Developed an immersive **Vision Pro** application that teaches 3D geometry through interactive cube manipulation, projection-based visualization, and curriculum-aligned problem solving. The project was funded by an **independently secured 20M KRW grant**, aiming to modernize spatial reasoning education through VR.
+**Target users**
 
-### Target Users
+- **Elementary students** needing hands-on spatial reasoning practice
+- **Teachers** seeking curriculum-aligned digital tools that extend traditional block-based activities
 
-* **Elementary students** needing hands-on spatial reasoning practice
-* **Teachers** seeking curriculum-aligned digital tools that extend traditional block-based activities
+### My Role
 
-### Implementation
+- **Principal Investigator**: Proposed the project and secured a **USD 15,000 grant** to fund it
+- Led system design, development, and the teacher evaluation
 
-* Built with **Unity 6** and **visionOS toolkit**
-* Intuitive hand-tracking for grabbing, snapping, grouping, and rotating cubes
-* Projection UI showing **top/front/side** views
-* In-app problem sets sourced from elementary textbooks
+### Approach
+
+- Built with **Unity 6** and the **visionOS toolkit**
+- Hand-tracking interactions for grabbing, snapping, grouping, and rotating cubes
+- Projection UI showing **top / front / side** views of the current structure
+- In-app problem sets sourced from elementary textbooks
 
 ### Demo
 
 <div class="video-container" style="position: relative; width: 100%; aspect-ratio: 16 / 9; margin: 20px 0;">
-  <iframe src="https://www.youtube.com/embed/qkqCtI9GuBA" title="VR Geometry Learning Demo" style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/qkqCtI9GuBA" title="VR Geometry Learning Demo" style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-### Evaluation
+### Results
 
-Semi-structured interviews with **4 elementary school teachers**.
+Semi-structured interviews with **4 elementary school teachers** (ratings on a 5-point scale).
 
 <style>
 .eval-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 20px 0; }
@@ -76,6 +80,4 @@ Semi-structured interviews with **4 elementary school teachers**.
   </div>
 </div>
 
-### Outcome
-
-A validated, immersive VR system that enhances spatial reasoning and provides a scalable, classroom-ready alternative to traditional stacking-cube activities.
+The result is a teacher-validated, classroom-ready alternative to traditional stacking-cube activities.

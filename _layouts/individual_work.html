@@ -8,44 +8,41 @@
     <div class="page-content">
       <div class="wrapper">
         <div class="work">
-            <div class="title-section" style="margin-bottom: 30px; border-left: 2px solid #828282; padding-left: 15px;">
-                <h1 class="page-heading" style="font-size: 1.5em; ">{{ page.title }}</h1>
-                
-                <span class="work-text" style="font-size: 1em; color: #666;">
-                  {% if page.location%}
-                    <em class="work-location">{{ page.location }}</em>
-                    <br>
-                  {% endif %}
-                  {% if page.advisor%}
-                    <span class="work-advisor"> Advisor: {{ page.advisor }}</span>
-                    <br>
-                  {% endif %}
-                  <em class="work-date">{{ page.date }}</em>
-                </span>
-              
-                <!-- Links with icons -->
-                <div class="work-links" style="margin-top: 10px;">
+            <header class="work-header">
+              <div class="work-title-row">
+                <h1 class="work-title">{{ page.title }}</h1>
+                {% if page.github %}
+                  <a class="work-title-github" href="{{ page.github }}" target="_blank" rel="noopener" title="GitHub Repository"><i class="fab fa-github"></i> GitHub</a>
+                {% endif %}
+              </div>
+              {% if page.subtitle %}
+                <p class="work-subtitle">{{ page.subtitle }}</p>
+              {% endif %}
+
+              <dl class="work-meta">
+                {% if page.role %}<div class="work-meta-item"><dt>Role</dt><dd>{{ page.role }}</dd></div>{% endif %}
+                {% if page.team %}<div class="work-meta-item"><dt>Team</dt><dd>{{ page.team }}</dd></div>{% endif %}
+                {% if page.context %}<div class="work-meta-item"><dt>Context</dt><dd>{{ page.context }}</dd></div>{% endif %}
+                {% if page.location %}<div class="work-meta-item"><dt>Where</dt><dd>{{ page.location }}</dd></div>{% endif %}
+                {% if page.advisor %}<div class="work-meta-item"><dt>Advisor</dt><dd>{{ page.advisor }}</dd></div>{% endif %}
+                {% if page.date %}<div class="work-meta-item"><dt>Period</dt><dd>{{ page.date }}</dd></div>{% endif %}
+              </dl>
+
+              {% if page.presentation or page.website %}
+                <div class="work-header-links">
                   {% if page.presentation %}
-                    <a href="{{ page.presentation | relative_url }}" target="_blank" title="Presentation">
-                      <i class="fas fa-file-powerpoint"></i> <!-- Presentation icon -->
-                    </a>
-                  {% endif %}
-                  {% if page.github %}
-                    <a href="{{ page.github }}" target="_blank" title="GitHub Repository">
-                      <i class="fab fa-github"></i> <!-- GitHub icon -->
-                    </a>
+                    <a href="{{ page.presentation | relative_url }}" target="_blank" rel="noopener"><i class="fas fa-file-powerpoint"></i> Slides</a>
                   {% endif %}
                   {% if page.website %}
-                    <a href="{{ page.website }}" target="_blank" title="Website">
-                      <i class="fas fa-globe"></i> <!-- Website icon -->
-                    </a>
+                    <a href="{{ page.website }}" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Website</a>
                   {% endif %}
                 </div>
-              </div>
-              
-          </div>
-          <br>
+              {% endif %}
+            </header>
+        </div>
+          <div class="work-body">
           {{ content }}
+          </div>
         </div>
       </div>
     </div>
