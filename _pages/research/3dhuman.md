@@ -14,22 +14,26 @@ This project aims to create high-quality 3D reconstructions by leveraging multi-
 
 ## Workflow
 
-## 1. Point Cloud Generation and Mesh Mapping
-   - **Open3D**: Starting with basic point cloud generation, we capture data in point cloud format and convert it to a mesh map using Open3D.
-   - **Colmap and Meshlab**: Using Colmap, we create dense point clouds and further refine them in Meshlab by generating mesh maps. Meshlab's Poisson reconstruction allows us to create continuous surfaces from point clouds by filling in gaps and smoothing edges.
+**1. Point Cloud Generation and Mesh Mapping**
 
-## 2. Camera Calibration and Stereo Rectification
-   - Using GoPro cameras, we first capture stereo images for calibration. The cameras are aligned using stereo rectification, where we apply calibration and rectification to correct any misalignment.
-   - **Camera Matrix Calculation**: By utilizing the camera calibration toolbox in MATLAB, we obtain intrinsic and extrinsic parameters (K, R, and t) needed for accurate depth mapping.
-   - **Stereo Rectification**: Rectified images are generated to enable accurate disparity mapping. HITNET is used for stereo reconstruction, generating disparity maps that allow us to calculate depth values from the aligned images.
+- **Open3D**: Starting with basic point cloud generation, we capture data in point cloud format and convert it to a mesh map using Open3D.
+- **Colmap and Meshlab**: Using Colmap, we create dense point clouds and further refine them in Meshlab by generating mesh maps. Meshlab's Poisson reconstruction allows us to create continuous surfaces from point clouds by filling in gaps and smoothing edges.
 
-## 3. Dense 3D Reconstruction
-   - **Disparity to Point Cloud**: Using the rectified images, we calculate disparity, which is then converted into a dense point cloud. From here, we use Poisson reconstruction in Meshlab to transform this dense point cloud into a continuous 3D mesh.
-   - **Reprojection and Alignment**: We reproject the point cloud back onto the original image to validate alignment, ensuring accurate correspondence between 3D space and image coordinates.
+**2. Camera Calibration and Stereo Rectification**
 
-## 4. Future work: Multi-Camera Setup for Enhanced 3D Depth
-   - With multiple GoPro setups, we capture the same scene from different perspectives. Each system’s point cloud is calculated with respect to the left rectified camera as the world coordinate origin.
-   - **Structure from Motion**: Using only the left cameras, we perform structure-from-motion to calculate each camera’s intrinsic and extrinsic parameters (K, R, t). The point clouds are then aligned within a single world coordinate system, merging individual perspectives for a unified and dense 3D structure.
+- Using GoPro cameras, we first capture stereo images for calibration. The cameras are aligned using stereo rectification, where we apply calibration and rectification to correct any misalignment.
+- **Camera Matrix Calculation**: By utilizing the camera calibration toolbox in MATLAB, we obtain intrinsic and extrinsic parameters (K, R, and t) needed for accurate depth mapping.
+- **Stereo Rectification**: Rectified images are generated to enable accurate disparity mapping. HITNET is used for stereo reconstruction, generating disparity maps that allow us to calculate depth values from the aligned images.
+
+**3. Dense 3D Reconstruction**
+
+- **Disparity to Point Cloud**: Using the rectified images, we calculate disparity, which is then converted into a dense point cloud. From here, we use Poisson reconstruction in Meshlab to transform this dense point cloud into a continuous 3D mesh.
+- **Reprojection and Alignment**: We reproject the point cloud back onto the original image to validate alignment, ensuring accurate correspondence between 3D space and image coordinates.
+
+**4. Future work: Multi-Camera Setup for Enhanced 3D Depth**
+
+- With multiple GoPro setups, we capture the same scene from different perspectives. Each system’s point cloud is calculated with respect to the left rectified camera as the world coordinate origin.
+- **Structure from Motion**: Using only the left cameras, we perform structure-from-motion to calculate each camera’s intrinsic and extrinsic parameters (K, R, t). The point clouds are then aligned within a single world coordinate system, merging individual perspectives for a unified and dense 3D structure.
 
 ## Technical Challenges
 
@@ -45,7 +49,7 @@ This project aims to create high-quality 3D reconstructions by leveraging multi-
 - **Meshlab**: For Poisson reconstruction to create dense surface meshes.
 - **MATLAB Calibration Toolbox**: To obtain camera parameters needed for accurate disparity and depth mapping.
 - **HITNET Stereo Reconstruction**: For generating disparity maps from rectified images.
-  
+
 ## Conclusion
 
 Through iterative testing with different multi-camera setups, this project aims to establish a robust pipeline for dense 3D reconstructions. By aligning and merging stereo pairs, we’re working toward capturing the scene from multiple angles to create an accurate, detailed 3D model. The final objective is to use video footage to replicate this process in dynamic scenes, capturing detailed structures from all directions for a comprehensive view.

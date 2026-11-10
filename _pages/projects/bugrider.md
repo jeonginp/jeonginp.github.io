@@ -40,6 +40,6 @@ BugRider is a 3D racing adventure game where players ride insect mounts through 
 
 ### Demo
 
-<div class="video-container" style="position: relative; width: 100%; aspect-ratio: 16 / 9; margin: 20px 0;">
+<div class="video-container" style="position: relative; width: 70%; aspect-ratio: 16 / 9; margin: 20px auto;">
   <iframe src="https://www.youtube.com/embed/bn0E7uKEc5I" title="BugRider Demo" style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>

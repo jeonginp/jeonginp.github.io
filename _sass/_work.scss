@@ -480,6 +480,31 @@ a.publication-title:hover {
   border-bottom: 1px solid #e5e5e5;
 }
 
+.work-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 1.2em;
+  font-size: 0.85em;
+  color: #888;
+  text-decoration: none;
+  transition: color 0.2s;
+
+  i {
+    font-size: 0.9em;
+    transition: transform 0.2s;
+  }
+
+  &:hover {
+    color: $brand-color;
+    text-decoration: none;
+
+    i {
+      transform: translateX(-3px);
+    }
+  }
+}
+
 .work-title-row {
   display: flex;
   flex-wrap: wrap;

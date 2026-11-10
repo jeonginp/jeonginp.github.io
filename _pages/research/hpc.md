@@ -5,8 +5,9 @@ title: Leveraging Data Analytics for Improved Performance Monitoring on HPC Syst
 slug: /research/leveraging-data-analytics-on-hpc-systems
 permalink: /research/leveraging-data-analytics-on-hpc-systems/
 date: Sep 2023 - Dec 2023
+role: Research Intern · Project Lead
 location: Max Planck Institute - Max Planck Computing and Data Facility
-advisor: Dr. Klaus Reuter, Dr. Markus Rampp
+mentors: Dr. Klaus Reuter, Dr. Markus Rampp
 ---
 
 A comprehensive study on performance data analysis, utilizing various machine learning techniques to understand and enhance system performance.
@@ -23,6 +24,15 @@ The objective of this project is to help users optimize their resource usage on 
   - Understand which features contribute most to system performance.
   - Provide explainable insights into HPC job efficiency.
 
+
+<br>
+
+## My Role
+
+- **Project Lead**: Led the project end-to-end as a research intern at MPCDF, from problem definition to final analysis, with guidance from mentors
+- **Data pipeline**: Collected HPC job performance metrics (CPU/GPU, memory, execution time) and built the cleaning, scaling, and feature-engineering pipeline
+- **Modeling**: Used the roofline model to label job efficiency and trained a **Random Forest** classifier to separate efficient from inefficient jobs
+- **Explainability**: Analyzed feature importance and validated it with **SHAP**, **LIME**, and a random-permutation baseline
 
 <br>
 

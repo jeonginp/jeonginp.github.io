@@ -13,12 +13,12 @@ github: https://github.com/Happetite-app-dev/mapsee
 
 **Mapsee** ties journal entries to places on a map. Users record memories at specific locations and share them with friends through collaborative folders.
 
-<div style="display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0;">
-  <img src="/assets/img/projects/mapsee/2_01.png" alt="Mapsee screen 1" style="width: 19%; min-width: 110px;">
-  <img src="/assets/img/projects/mapsee/2_02.png" alt="Mapsee screen 2" style="width: 19%; min-width: 110px;">
-  <img src="/assets/img/projects/mapsee/2_03.png" alt="Mapsee screen 3" style="width: 19%; min-width: 110px;">
-  <img src="/assets/img/projects/mapsee/2_04.png" alt="Mapsee screen 4" style="width: 19%; min-width: 110px;">
-  <img src="/assets/img/projects/mapsee/2_05.png" alt="Mapsee screen 5" style="width: 19%; min-width: 110px;">
+<div style="display: flex; gap: 0;">
+  <img src="/assets/img/projects/mapsee/2_01.png" alt="Mapsee screen 1" style="display: block; flex: 1 1 0; min-width: 0; width: 20%;">
+  <img src="/assets/img/projects/mapsee/2_02.png" alt="Mapsee screen 2" style="display: block; flex: 1 1 0; min-width: 0; width: 20%;">
+  <img src="/assets/img/projects/mapsee/2_03.png" alt="Mapsee screen 3" style="display: block; flex: 1 1 0; min-width: 0; width: 20%;">
+  <img src="/assets/img/projects/mapsee/2_04.png" alt="Mapsee screen 4" style="display: block; flex: 1 1 0; min-width: 0; width: 20%;">
+  <img src="/assets/img/projects/mapsee/2_05.png" alt="Mapsee screen 5" style="display: block; flex: 1 1 0; min-width: 0; width: 20%;">
 </div>
 
 ### My Role
@@ -37,4 +37,4 @@ github: https://github.com/Happetite-app-dev/mapsee
 
 ### Results
 
-Released on the **Apple App Store** after passing App Store review. Mapsee was Happetite's second product and its first map-based service.
+Released on the **Apple App Store** (Feb 2023 – Feb 2024) after passing App Store review. Mapsee was Happetite's second product and its first map-based service.

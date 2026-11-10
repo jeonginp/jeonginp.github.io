@@ -33,14 +33,14 @@ A **React** chat interface connected to the **GPT-4 API**:
 3. **Answers** are connected to the question they respond to.
 4. Users browse by topic tag to find earlier questions and their answers.
 
-<img src="/assets/img/projects/quac/diagram.png" alt="System diagram" style="width: 100%; margin: 20px 0;" />
+<img src="/assets/img/projects/quac/diagram.png" alt="System diagram" style="width: 80%; display: block; margin: 20px auto;" />
 
 The interface was prototyped in Miro and iterated toward a structured Q&A layout with keyword-based navigation.
 
-<div style="display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0; justify-content: center;">
-  <img src="/assets/img/projects/quac/demo1.png" alt="QuAC interface 1" style="width: 30%; min-width: 180px; border-radius: 8px;">
-  <img src="/assets/img/projects/quac/demo2.png" alt="QuAC interface 2" style="width: 30%; min-width: 180px; border-radius: 8px;">
-  <img src="/assets/img/projects/quac/demo3.png" alt="QuAC interface 3" style="width: 30%; min-width: 180px; border-radius: 8px;">
+<div style="display: flex; flex-wrap: wrap; gap: 12px; width: 80%; margin: 20px auto; justify-content: center;">
+  <img src="/assets/img/projects/quac/demo1.png" alt="QuAC interface 1" style="width: calc((100% - 24px) / 3); min-width: 160px; border-radius: 8px;">
+  <img src="/assets/img/projects/quac/demo2.png" alt="QuAC interface 2" style="width: calc((100% - 24px) / 3); min-width: 160px; border-radius: 8px;">
+  <img src="/assets/img/projects/quac/demo3.png" alt="QuAC interface 3" style="width: calc((100% - 24px) / 3); min-width: 160px; border-radius: 8px;">
 </div>
 
 ### Results

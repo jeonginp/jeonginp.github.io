@@ -39,6 +39,7 @@ Radiology reports are written for clinicians and are hard for patients to read, 
 
 Responses were scored (0–4) on **accuracy, conciseness, consistency, and understandability**. Ko-Radiology-GPT outperformed both the base **Llama2** and the English medical model **Hippo** on all four criteria, e.g. accuracy **3.21** vs. about 2.5 (Llama2) and 1.4 (Hippo).
 
-<img src="/assets/img/projects/kogpt/result.png" alt="Evaluation results" style="width: 100%; max-width: 500px; display: block; margin: 20px auto;" />
-
-<img src="/assets/img/projects/demo2.png" alt="Demo" style="width: 100%; max-width: 500px; display: block; margin: 20px auto;" />
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin: 20px 0;">
+  <img src="/assets/img/projects/kogpt/result.png" alt="Evaluation results" style="flex: 1.62 1 260px; min-width: 0; height: auto;" />
+  <img src="/assets/img/projects/demo2.png" alt="Demo" style="flex: 1.28 1 220px; min-width: 0; height: auto;" />
+</div>

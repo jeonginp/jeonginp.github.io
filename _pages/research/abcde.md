@@ -4,8 +4,9 @@ title: ABCDE (Attention Based Cell Detection Enhancer)
 slug: /research/attention-based-cell-detection-enhancer
 permalink: /research/attention-based-cell-detection-enhancer/
 date: Dec 2023 - Feb 2024
+role: Research Intern · Project Lead
 location: Lunit Inc.
-advisor: Jaewoong Shin, Dr. Sergio Pereira
+mentors: Jaewoong Shin, Dr. Sergio Pereira
 ---
 
 ## Project Overview
@@ -15,9 +16,15 @@ The goal of this project is to improve cell detection results by incorporating r
 
 **Define the Problem**  
 The current model focuses on predicting each cell point individually, but it became clear that cell-to-cell relationships should be accounted for. This led to the development of the **Attention Based Cell Detection Enhancer**, which uses attention mechanisms to consider both positional and feature-based cell relationships.
-![Problem definition](../../assets/img/research/abcde/1.png)
+<img src="/assets/img/research/abcde/1.png" alt="Problem definition" style="width: 70%; display: block; margin: 20px auto;" />
 
-<br>
+## My Role
+
+- **Project Lead**: Led the project end-to-end as a research intern at Lunit, from problem definition to final analysis, with guidance from mentors
+- **Problem definition**: Identified that the existing detector ignores cell-to-cell relationships and proposed an attention-based enhancer
+- **Idea exploration**: Built and compared KNN-based and feature-map-based cell graphs to decide how to model cell relationships
+- **Model design & implementation**: Designed the Transformer-based enhancer on top of the original model's feature map and predictions, and adopted **Deformable Attention** to fit GPU memory limits
+- **Experiments & analysis**: Ran configuration sweeps (layers, optimizers, schedulers), analyzed attention maps, and introduced the **distance-based attention mask** that improved results
 
 ## Idea Development
 
@@ -27,9 +34,7 @@ To represent the relationships between cells, we experimented with graphs create
 **Final Idea**  
 The enhanced model combines positional data with feature similarity, providing a more comprehensive perspective on cellular interactions. This fusion is achieved through graph structures and attention layers within the model.
 
-![KNN and Feature Map graphs](../../assets/img/research/abcde/2.png)
-
-<br>
+<img src="/assets/img/research/abcde/2.png" alt="KNN and Feature Map graphs" style="width: 70%; display: block; margin: 20px auto;" />
 
 ## Model Implementation & Architecture
 
@@ -42,9 +47,7 @@ We use the original model's feature map and prediction results as inputs. By inc
 **Model Architecture Development**  
 Initially, we faced memory constraints, leading us to minimize the model's complexity. Our final architecture employs **Deformable Attention Layers** to efficiently manage GPU memory and accurately attend to relevant cell points.
 
-![Diagrams of model architecture and feature query process](../../assets/img/research/abcde/3.pdf)
-
-<br>
+<img src="/assets/img/research/abcde/3.png" alt="Diagrams of model architecture and feature query process" style="width: 70%; display: block; margin: 20px auto;" />
 
 ## Experiment Results
 
@@ -54,11 +57,7 @@ We conducted experiments with various configurations (number of layers, optimize
 **Visualization Results**  
 A visual comparison of the original and enhanced model results highlights the increase in accurate cell classification and the reduction of misclassified points.
 
-
-![Experimental result tables](../../assets/img/research/abcde/4.png)
-
-
-<br>
+<img src="/assets/img/research/abcde/4.png" alt="Experimental result tables" style="width: 70%; display: block; margin: 20px auto;" />
 
 ## Attention Map
 
@@ -71,12 +70,4 @@ To focus on biologically relevant interactions, we restricted attention to nearb
 **Effect of Attention Map**  
 With the Attention Mask, the model now more effectively highlights cell clusters, producing results that align closely with ground truth.
 
-![Final Attention Map showing connections between relevant cells](../../assets/img/research/abcde/5.png)
-
-
-<br>
-
-<!-- ## Further Investigation
-
-**Future Directions**  
-In the future, we aim to refine this model further by experimenting with alternative attention mechanisms and exploring ways to enhance scalability. Potential improvements include implementing adaptive attention based on biological insights and further optimizing the model for larger datasets. -->
+<img src="/assets/img/research/abcde/5.png" alt="Final Attention Map showing connections between relevant cells" style="width: 70%; display: block; margin: 20px auto;" />

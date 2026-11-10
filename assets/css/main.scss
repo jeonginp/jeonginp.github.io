@@ -420,3 +420,47 @@ h2 {
   vertical-align: middle;
   border-radius: 2px;
 }
+
+/* === Individual work pages: tables === */
+.work-body table {
+  width: auto;
+  min-width: 70%;
+  margin: 24px auto;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+
+  th,
+  td {
+    padding: 10px 16px;
+    border: none;
+  }
+
+  thead th {
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1px solid #333;
+    white-space: nowrap;
+  }
+
+  tbody tr + tr td {
+    border-top: 1px solid #eee;
+  }
+
+  td {
+    color: #444;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &.highlight-last tbody tr:last-child td {
+    background: rgba($brand-color, 0.07);
+    color: #222;
+  }
+
+  @media (max-width: 600px) {
+    display: block;
+    overflow-x: auto;
+    min-width: 0;
+  }
+}

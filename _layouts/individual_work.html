@@ -9,6 +9,7 @@
       <div class="wrapper">
         <div class="work">
             <header class="work-header">
+              <a class="work-back" href="{{ '/#projects' | relative_url }}"><i class="fas fa-arrow-left"></i> Projects</a>
               <div class="work-title-row">
                 <h1 class="work-title">{{ page.title }}</h1>
                 {% if page.github %}
@@ -25,6 +26,7 @@
                 {% if page.context %}<div class="work-meta-item"><dt>Context</dt><dd>{{ page.context }}</dd></div>{% endif %}
                 {% if page.location %}<div class="work-meta-item"><dt>Where</dt><dd>{{ page.location }}</dd></div>{% endif %}
                 {% if page.advisor %}<div class="work-meta-item"><dt>Advisor</dt><dd>{{ page.advisor }}</dd></div>{% endif %}
+                {% if page.mentors %}<div class="work-meta-item"><dt>Mentors</dt><dd>{{ page.mentors }}</dd></div>{% endif %}
                 {% if page.date %}<div class="work-meta-item"><dt>Period</dt><dd>{{ page.date }}</dd></div>{% endif %}
               </dl>
 
