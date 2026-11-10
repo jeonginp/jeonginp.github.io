@@ -43,14 +43,14 @@ I am interested in designing human-AI interactions that augment people’s abili
 
 I am currently a Master’s student in the [HCI Lab](http://hcil.snu.ac.kr/) at Seoul National University, advised by [Prof. Jinwook Seo](https://hcil.snu.ac.kr/people/jinwook-seo). I received my B.S. in Computer Science and Engineering and Mathematical Sciences from Seoul National University, fully funded by the Presidential Science Scholarship.
 
-From January to July 2026, I was a visiting intern at the [Augmented Perception Lab](https://augmented-perception.org/) at Carnegie Mellon University, collaborating with [Prof. David Lindlbauer](https://www.davidlindlbauer.com). I also have research and industry experience at [Lunit Inc.](https://www.lunit.io/) and the [Max Planck Institute](https://www.mpcdf.mpg.de/).
+From January to July 2026, I was a visiting intern at the [Augmented Perception Lab](https://augmented-perception.org/) at Carnegie Mellon University, advised by [Prof. David Lindlbauer](https://www.davidlindlbauer.com). I also have research and industry experience at [Lunit Inc.](https://www.lunit.io/) and the [Max Planck Institute](https://www.mpcdf.mpg.de/).
 
 My previous work lies at the intersection of Visualization, Human-AI interaction, and wearable interactions and XR.
 
 <div style="text-align: center;">
   <picture>
     <source media="(max-width: 768px)" srcset="assets/img/PrevWorkwithFig_horizontal.png" />
-    <img src="assets/img/PrevWorkwithFig.png" alt="Research Overview" style="width: 100%;" />
+    <img src="assets/img/PrevWorkwithFig.png" alt="Research Overview" style="width: 100%; max-width: 850px;" />
   </picture>
 </div>
 
@@ -61,19 +61,15 @@ My previous work lies at the intersection of Visualization, Human-AI interaction
 {% include publications.html %}
 </div>
 
-<div id="education" class="home-section">
-<h2 class="section">Education</h2>
-{% include education.html %}
+<div id="projects" class="home-section">
+<h2 class="section">Projects</h2>
+{% include project.html %}
 </div>
 
 <div id="experience" class="home-section">
 <h2 class="section">Research Experience</h2>
 {% include experience.html %}
 </div>
-<!-- <div id="projects" class="home-section">
-<h2 class="section">Projects</h2>
-{% include project.html %}
-</div> -->
 
 <br>
 

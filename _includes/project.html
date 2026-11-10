@@ -1,45 +1,67 @@
-<div class="projects-list">
-  {% for item in site.data.project %}
-  <div class="publication-item">
-    {% if item.image.src %}
-    <img
-      src="{{ item.image.src | absolute_url }}"
-      alt="{{ item.image.alt }}"
-      class="work-bubble"
-    />
-    {% endif %}
+{% assign project_keywords = "XR|AI/ML|Computer Vision|3D & Graphics|LLM|App Development" | split: "|" %}
 
-    <span class="publication-text">
-      <span class="publication-title">
-        {% if item.url %}
-        <a href="{{ item.url | relative_url }}" class="custom-link">{{ item.title }}</a>
-        {% else %}
-        {{ item.title }}
-        {% endif %}
-      </span>
-      <br>
-      <span class="publication-status">{{ item.date }}</span>
-      <br>
-      {{ item.description }}
-
-      <div class="work-links">
-        {% if item.presentation %}
-          <a href="{{ item.presentation | relative_url }}" target="_blank" title="Presentation">
-            <i class="fas fa-file-powerpoint"></i>
-          </a>
-        {% endif %}
-        {% if item.github %}
-          <a href="{{ item.github }}" target="_blank" title="GitHub Repository">
-            <i class="fab fa-github"></i>
-          </a>
-        {% endif %}
-        {% if item.website %}
-          <a href="{{ item.website }}" target="_blank" title="Website">
-            <i class="fas fa-globe"></i>
-          </a>
-        {% endif %}
-      </div>
-    </span>
-  </div>
+<div class="project-filters" role="group" aria-label="Filter projects by keyword">
+  <button type="button" class="project-filter is-active" data-filter="all" aria-pressed="true">
+    All <span class="project-filter-count">{{ site.data.project | size }}</span>
+  </button>
+  {% for kw in project_keywords %}
+    {% assign kw_count = 0 %}
+    {% for item in site.data.project %}
+      {% if item.tags contains kw %}{% assign kw_count = kw_count | plus: 1 %}{% endif %}
+    {% endfor %}
+  <button type="button" class="project-filter" data-filter="{{ kw }}" aria-pressed="false">
+    {{ kw }} <span class="project-filter-count">{{ kw_count }}</span>
+  </button>
   {% endfor %}
 </div>
+
+<div class="project-grid">
+  {% for item in site.data.project %}
+  {% capture tag_attr %}{{ item.tags | join: "|" }}{% endcapture %}
+  {% if item.url %}<a class="project-card" href="{{ item.url | relative_url }}" data-tags="{{ tag_attr }}">{% else %}<div class="project-card" data-tags="{{ tag_attr }}">{% endif %}
+    <div class="project-card-image {% unless item.image.src %}no-image{% endunless %} {% if item.image.fit == 'contain' %}is-contain{% endif %}">
+      {% if item.image.src %}
+        <img src="{{ item.image.src | absolute_url }}" alt="{{ item.image.alt }}" loading="lazy"{% if item.image.position %} style="object-position: {{ item.image.position }};"{% endif %} />
+      {% else %}
+        <i class="fas fa-code placeholder-icon"></i>
+      {% endif %}
+    </div>
+    <div class="project-card-content">
+      <h3 class="project-card-title">{{ item.title }}</h3>
+      {% if item.year or item.role %}
+      <div class="project-card-meta">
+        {{ item.year }}{% if item.year and item.role %} · {% endif %}{% if item.role %}<span class="project-card-role">{{ item.role }}</span>{% endif %}
+      </div>
+      {% endif %}
+      {% if item.tags %}
+      <div class="project-card-tags">
+        {% for tag in item.tags %}
+          <span class="project-tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  {% if item.url %}</a>{% else %}</div>{% endif %}
+  {% endfor %}
+</div>
+
+<script>
+  (function () {
+    var buttons = document.querySelectorAll('.project-filter');
+    var cards = document.querySelectorAll('.project-grid .project-card');
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var filter = btn.getAttribute('data-filter');
+        buttons.forEach(function (b) {
+          var on = b === btn;
+          b.classList.toggle('is-active', on);
+          b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+        cards.forEach(function (card) {
+          var tags = (card.getAttribute('data-tags') || '').split('|');
+          card.hidden = !(filter === 'all' || tags.indexOf(filter) !== -1);
+        });
+      });
+    });
+  })();
+</script>
