@@ -18,6 +18,12 @@
   pdf: /assets/pdf/jeon_stopmisusing.pdf
   abstract: "Misuses of t-SNE and UMAP in visual analytics have become increasingly common. For example, although t-SNE and UMAP projections often do not faithfully reflect the original distances between clusters, practitioners frequently use them to investigate inter-cluster relationships. We investigate why this misuse occurs, and discuss methods to prevent it. To that end, we first review 136 papers to verify the prevalence of the misuse. We then interview researchers who have used dimensionality reduction (DR) to understand why such misuse occurs. Finally, we interview DR experts to examine why previous efforts failed to address the misuse. We find that the misuse of t-SNE and UMAP stems primarily from limited DR literacy among practitioners, and that existing attempts to address this issue -- mostly based on academic papers -- have been ineffective. Based on these insights, we discuss potential future research directions to mitigate the misuse."
 
+- title: Physical Containers as Framing Conditions for Visualization in Augmented Reality
+  authors: Jiyeon Bae, Mingyu An, Jeongin Park, Seokweon Jung, Kiroong Choe, and Jinwook Seo
+  status: "IEEE Pacific Visualization Conference (PacificVis'26). <b>Best Poster Award.</b>"
+  teaser: /assets/img/publications/bae_physicalcontainers_multiface.png
+  arxiv: https://arxiv.org/abs/2603.21637
+
 - title: Dataset-Adaptive Dimensionality Reduction
   authors: Hyeon Jeon, Jeongin Park, Soohyun Lee, Dae Hyun Kim, Sungbok Shin, and Jinwook Seo
   status: IEEE Transactions on Visualization and Computer Graphics (VIS'25)

@@ -38,7 +38,7 @@
     {% endif %}
 
     <span class="publication-text">
-      <span class="publication-title">{{ item.title }}</span>
+      <span class="publication-title">{% if item.type == "poster" %}[P] {% endif %}{{ item.title }}</span>
       <br>
       <em class="publication-authors">{{ item.authors | replace: "Jeongin Park", "<u>Jeongin Park</u>" }}</em>
       <br>
