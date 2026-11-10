@@ -33,7 +33,7 @@ $on-laptop: 800px;
 }
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "base", "layout", "site", "work", "blog", "post", "404";
+@import "base", "layout", "site", "work", "projects", "blog", "post", "404";
 
 .contact-links {
   margin-top: 0.3em;
@@ -45,6 +45,18 @@ $on-laptop: 800px;
   margin-bottom: 0;
   font-family: "Roboto", sans-serif !important;
   font-weight: 700;
+}
+
+.page-content p a {
+  color: inherit !important;
+  text-decoration: none !important;
+  border-bottom: 1px dashed #888;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.page-content p a:hover {
+  color: $brand-color-light !important;
+  border-bottom: 1px solid $brand-color-light;
 }
 
 .home-subtitle {
@@ -90,16 +102,34 @@ hr {
 
 /* 각 섹션의 박스 스타일 */
 .section {
-  margin-bottom: 0px;
-  font-size: 1.3em;
+  margin-bottom: 0.6rem;
+  font-size: 1.6em;
   font-family: "Roboto", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
+  color: #333;
   line-height: 1.5;
 }
 
-.home-section + .home-section {
-  margin-top: 1.5rem;
+/* === 섹션 간격 === */
+.home-section:first-of-type {
+  margin-top: 3rem;
 }
+
+.home-section + .home-section {
+  margin-top: 2.5rem;
+}
+
+.section::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 0.9em;
+  background-color: $brand-color;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
 
 .section strong {
   color: #222;
