@@ -27,13 +27,8 @@ Developed an immersive **Vision Pro** application that teaches 3D geometry throu
 
 ### Demo
 
-<div class="video-container" style="position: relative; cursor: pointer; max-width: 100%; margin: 20px 0;" onclick="this.querySelector('video').play(); this.querySelector('.play-overlay').style.display='none';">
-  <video style="width: 100%;" controls>
-    <source src="/assets/img/projects/vr-education/VR Education demo.mov" type="video/quicktime">
-  </video>
-  <div class="play-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.6); border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
-    <span style="color: white; font-size: 32px; margin-left: 5px;">▶</span>
-  </div>
+<div class="video-container" style="position: relative; width: 100%; aspect-ratio: 16 / 9; margin: 20px 0;">
+  <iframe src="https://www.youtube.com/embed/qkqCtI9GuBA" title="VR Geometry Learning Demo" style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ### Evaluation
