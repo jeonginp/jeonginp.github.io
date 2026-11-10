@@ -1,7 +1,7 @@
 ---
 layout: individual_work
-title: VR-Based Geometry Learning Application (PI, 20M KRW Grant)
-subtitle: A system using LLMs to resolve question-answer matching and reduce information overload in large group chats.
+title: VR-Based Geometry Learning Application
+subtitle: PI, 20M KRW Grant - A Vision Pro-based spatial reasoning learning tool
 slug: /projects/vr-education
 permalink: /projects/vr-education/
 date: Dec 2024 - May 2025
@@ -25,12 +25,61 @@ Developed an immersive **Vision Pro** application that teaches 3D geometry throu
 * Projection UI showing **top/front/side** views
 * In-app problem sets sourced from elementary textbooks
 
+### Demo
+
+<div class="video-container" style="position: relative; cursor: pointer; max-width: 100%; margin: 20px 0;" onclick="this.querySelector('video').play(); this.querySelector('.play-overlay').style.display='none';">
+  <video style="width: 100%;" controls>
+    <source src="/assets/img/projects/vr-education/VR Education demo.mov" type="video/quicktime">
+  </video>
+  <div class="play-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.6); border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
+    <span style="color: white; font-size: 32px; margin-left: 5px;">▶</span>
+  </div>
+</div>
+
 ### Evaluation
 
-Conducted user studies with education practitioners.
+Semi-structured interviews with **4 elementary school teachers**.
 
-* Strong usability ratings for cube interaction, projection UI, and problem-solving flow
-* Users highlighted high educational value and alignment with AIDT digital textbook initiatives
+<style>
+.eval-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 20px 0; }
+@media (max-width: 600px) { .eval-grid { grid-template-columns: 1fr; } }
+.eval-card { background: #fafafa; border: 1px solid #eee; padding: 16px; }
+.eval-card h4 { margin: 0 0 12px 0; font-size: 0.95em; color: #333; }
+.eval-bar { display: flex; align-items: center; margin: 8px 0; font-size: 0.8em; }
+.eval-label { width: 80px; color: #666; flex-shrink: 0; }
+.eval-track { flex: 1; height: 12px; background: #e0e0e0; position: relative; }
+.eval-fill { height: 100%; background: linear-gradient(90deg, #f5a623, #e88e0c); }
+.eval-score { width: 30px; text-align: right; color: #666; margin-left: 8px; }
+</style>
+
+<div class="eval-grid">
+  <div class="eval-card">
+    <h4>Interaction</h4>
+    <div class="eval-bar"><span class="eval-label">Manipulation</span><div class="eval-track"><div class="eval-fill" style="width:90%"></div></div><span class="eval-score">4.5</span></div>
+    <div class="eval-bar"><span class="eval-label">Combining</span><div class="eval-track"><div class="eval-fill" style="width:96%"></div></div><span class="eval-score">4.8</span></div>
+    <div class="eval-bar"><span class="eval-label">Rotation</span><div class="eval-track"><div class="eval-fill" style="width:94%"></div></div><span class="eval-score">4.7</span></div>
+  </div>
+  <div class="eval-card">
+    <h4>Problem-Solving UI</h4>
+    <div class="eval-bar"><span class="eval-label">Difficulty</span><div class="eval-track"><div class="eval-fill" style="width:86%"></div></div><span class="eval-score">4.3</span></div>
+    <div class="eval-bar"><span class="eval-label">Variety</span><div class="eval-track"><div class="eval-fill" style="width:80%"></div></div><span class="eval-score">4.0</span></div>
+    <div class="eval-bar"><span class="eval-label">Validation</span><div class="eval-track"><div class="eval-fill" style="width:88%"></div></div><span class="eval-score">4.4</span></div>
+  </div>
+  <div class="eval-card">
+    <h4>Projection UI</h4>
+    <div class="eval-bar"><span class="eval-label">Accuracy</span><div class="eval-track"><div class="eval-fill" style="width:94%"></div></div><span class="eval-score">4.7</span></div>
+    <div class="eval-bar"><span class="eval-label">Relevance</span><div class="eval-track"><div class="eval-fill" style="width:92%"></div></div><span class="eval-score">4.6</span></div>
+    <div class="eval-bar"><span class="eval-label">Usefulness</span><div class="eval-track"><div class="eval-fill" style="width:96%"></div></div><span class="eval-score">4.8</span></div>
+  </div>
+  <div class="eval-card">
+    <h4>Classroom Feasibility</h4>
+    <div style="font-size: 0.85em; color: #555; line-height: 1.5;">
+      <div>✓ All 4 teachers rated positively for real classroom use</div>
+      <div>✓ Aligns with Korea's 2022 curriculum & AIDT initiatives</div>
+      <div>✓ Enables quick adoption and extended learning</div>
+    </div>
+  </div>
+</div>
 
 ### Outcome
 
