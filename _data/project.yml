@@ -45,7 +45,7 @@
     fit: contain
     alt: Cell Detection
   tags: [Computer Vision, AI/ML]
-  url: /research/attention-based-cell-detection-enhancer
+  url: /projects/attention-based-cell-detection-enhancer
 
 - title: Question-Answer-and-Connect
   year: "2024"
@@ -75,7 +75,7 @@
     src: /assets/img/research/hpc_performance.png
     alt: HPC Performance
   tags: [AI/ML]
-  url: /research/leveraging-data-analytics-on-hpc-systems
+  url: /projects/leveraging-data-analytics-on-hpc-systems
 
 - title: Multi-View 3D Human Reconstruction
   year: "2023"
@@ -85,7 +85,7 @@
     position: top
     alt: Digital Human Reconstruction
   tags: [Computer Vision, 3D & Graphics]
-  url: /research/multi-view-systemfor-high-quality-digital-human-reconstruction
+  url: /projects/multi-view-systemfor-high-quality-digital-human-reconstruction
 
 - title: MAPSEE – Map Journal App
   year: "2022–23"

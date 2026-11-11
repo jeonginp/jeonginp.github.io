@@ -7,7 +7,7 @@
   description: Developed a vision transformer model that improves accuracy in cell detection by accounting for interactions between cells, enhancing predictive power and precision in cell behavior analysis.
   presentation: assets/img/research/Lunit.pdf
   tags: [Vision Transformer, Medical AI, Cell Detection]
-  url: /research/attention-based-cell-detection-enhancer
+  url: /projects/attention-based-cell-detection-enhancer
 
 - title: Leveraging Data Analytics for Improved Performance Monitoring on HPC Systems
   location: Max Planck Institute - Max Planck Computing and Data Facility (MPCDF)
@@ -18,7 +18,7 @@
   description: Applied advanced data analytics to optimize performance monitoring on high-performance computing (HPC) systems, identifying bottlenecks and improving resource allocation for more efficient system usage.
   presentation: assets/img/research/MPCDF.pdf
   tags: [Data Analytics, HPC, XAI]
-  url: /research/leveraging-data-analytics-on-hpc-systems
+  url: /projects/leveraging-data-analytics-on-hpc-systems
 
 - title: MAPSEE – A Map-Based Journal App
   image:

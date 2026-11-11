@@ -1,8 +1,8 @@
 ---
 layout: individual_work
 title: ABCDE (Attention Based Cell Detection Enhancer)
-slug: /research/attention-based-cell-detection-enhancer
-permalink: /research/attention-based-cell-detection-enhancer/
+slug: /projects/attention-based-cell-detection-enhancer
+permalink: /projects/attention-based-cell-detection-enhancer/
 date: Dec 2023 - Feb 2024
 role: Research Intern · Project Lead
 location: Lunit Inc.

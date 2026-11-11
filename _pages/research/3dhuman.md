@@ -1,8 +1,8 @@
 ---
 layout: individual_work
 title: Multi-View System for High-Quality Digital Human Reconstruction
-slug: /research/multi-view-systemfor-high-quality-digital-human-reconstruction
-permalink: /research/multi-view-systemfor-high-quality-digital-human-reconstruction/
+slug: /projects/multi-view-systemfor-high-quality-digital-human-reconstruction
+permalink: /projects/multi-view-systemfor-high-quality-digital-human-reconstruction/
 date: Mar 2023 - Aug 2023
 location: Vision Computing Lab, Seoul National University
 advisor: Prof. Hanbyul Joo

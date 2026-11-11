@@ -2,8 +2,8 @@
 
 layout: individual_work
 title: Leveraging Data Analytics for Improved Performance Monitoring on HPC Systems
-slug: /research/leveraging-data-analytics-on-hpc-systems
-permalink: /research/leveraging-data-analytics-on-hpc-systems/
+slug: /projects/leveraging-data-analytics-on-hpc-systems
+permalink: /projects/leveraging-data-analytics-on-hpc-systems/
 date: Sep 2023 - Dec 2023
 role: Research Intern · Project Lead
 location: Max Planck Institute - Max Planck Computing and Data Facility

@@ -1,8 +1,8 @@
 ---
 layout: individual_work
 title: Human Computer Interaction
-slug: /research/human-computer-interaction
-permalink: /research/human-computer-interaction/
+slug: /projects/human-computer-interaction
+permalink: /projects/human-computer-interaction/
 location: Human Computer Interaction Lab, Seoul National University
 date: Mar 2024 - Present
 advisor: Prof. Jinwook Seo
