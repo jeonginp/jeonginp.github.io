@@ -5,7 +5,7 @@ subtitle: A Korean language model for real-time Q&A on chest X-ray radiology rep
 slug: /projects/ko-radiology-gpt/
 permalink: /projects/ko-radiology-gpt/
 date: Mar 2024 - Jun 2024
-role: Co-Developer · Data Analysis
+role: Developer · Data Analysis
 github: https://github.com/ZzeongB/Ko-Radiology-GPT
 ---
 

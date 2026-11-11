@@ -30,7 +30,7 @@
       <h3 class="project-card-title">{{ item.title }}</h3>
       {% if item.year or item.role %}
       <div class="project-card-meta">
-        {{ item.year }}{% if item.year and item.role %} · {% endif %}{% if item.role %}<span class="project-card-role">{{ item.role }}</span>{% endif %}
+        {{ item.year }}{% if item.year and item.role %} · {% endif %}{% if item.role %}<span class="project-card-role">{{ item.role }}</span>{% endif %}{% if item.org %} @ <span class="project-card-role">{{ item.org }}</span>{% endif %}
       </div>
       {% endif %}
       {% if item.tags %}

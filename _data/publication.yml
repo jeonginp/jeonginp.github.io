@@ -18,12 +18,6 @@
   pdf: /assets/pdf/jeon_stopmisusing.pdf
   abstract: "Misuses of t-SNE and UMAP in visual analytics have become increasingly common. For example, although t-SNE and UMAP projections often do not faithfully reflect the original distances between clusters, practitioners frequently use them to investigate inter-cluster relationships. We investigate why this misuse occurs, and discuss methods to prevent it. To that end, we first review 136 papers to verify the prevalence of the misuse. We then interview researchers who have used dimensionality reduction (DR) to understand why such misuse occurs. Finally, we interview DR experts to examine why previous efforts failed to address the misuse. We find that the misuse of t-SNE and UMAP stems primarily from limited DR literacy among practitioners, and that existing attempts to address this issue -- mostly based on academic papers -- have been ineffective. Based on these insights, we discuss potential future research directions to mitigate the misuse."
 
-- title: Physical Containers as Framing Conditions for Visualization in Augmented Reality
-  authors: Jiyeon Bae, Mingyu An, Jeongin Park, Seokweon Jung, Kiroong Choe, and Jinwook Seo
-  status: "IEEE Pacific Visualization Conference (PacificVis'26). <b>Best Poster Award.</b>"
-  teaser: /assets/img/publications/bae_physicalcontainers_multiface.png
-  arxiv: https://arxiv.org/abs/2603.21637
-
 - title: Dataset-Adaptive Dimensionality Reduction
   authors: Hyeon Jeon, Jeongin Park, Soohyun Lee, Dae Hyun Kim, Sungbok Shin, and Jinwook Seo
   status: IEEE Transactions on Visualization and Computer Graphics (VIS'25)
@@ -32,3 +26,9 @@
   doi: 10.1109/TVCG.2025.3634784
   pdf: /assets/pdf/jeon_datasetadaptive.pdf
   abstract: "Selecting the appropriate dimensionality reduction (DR) technique and determining its optimal hyperparameter settings that maximize the accuracy of the output projections typically involves extensive trial and error, often resulting in unnecessary computational overhead. To address this challenge, we propose a dataset-adaptive approach to DR optimization guided by structural complexity metrics. These metrics quantify the intrinsic complexity of a dataset, predicting whether higher-dimensional spaces are necessary to represent it accurately. Since complex datasets are often inaccurately represented in two-dimensional projections, leveraging these metrics enables us to predict the maximum achievable accuracy of DR techniques for a given dataset, eliminating redundant trials in optimizing DR. We introduce the design and theoretical foundations of these structural complexity metrics. We quantitatively verify that our metrics effectively approximate the ground truth complexity of datasets and confirm their suitability for guiding dataset-adaptive DR workflow. Finally, we empirically show that our dataset-adaptive workflow significantly enhances the efficiency of DR optimization without compromising accuracy."
+
+- title: Physical Containers as Framing Conditions for Visualization in Augmented Reality
+  authors: Jiyeon Bae, Mingyu An, Jeongin Park, Seokweon Jung, Kiroong Choe, and Jinwook Seo
+  status: "IEEE Pacific Visualization Conference (PacificVis'26). <b>Best Poster Award.</b>"
+  teaser: /assets/img/publications/bae_physicalcontainers_multiface.png
+  arxiv: https://arxiv.org/abs/2603.21637

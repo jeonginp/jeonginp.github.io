@@ -38,7 +38,8 @@
 
 - title: Attention Based Cell Detection Enhancer
   year: "2024"
-  role: "Project Lead"
+  role: "Research Intern"
+  org: "Lunit"
   image:
     src: /assets/img/research/cell_detection.png
     fit: contain
@@ -58,7 +59,7 @@
 
 - title: Ko-Radiology-GPT
   year: "2024"
-  role: "Co-Developer · Data Analysis"
+  role: "Developer · Data Analysis"
   image:
     src: /assets/img/projects/demo2.png
     fit: contain
@@ -68,7 +69,8 @@
 
 - title: Data Analytics for HPC Systems
   year: "2023"
-  role: "Project Lead"
+  role: "Research Intern"
+  org: "Max Planck Institute"
   image:
     src: /assets/img/research/hpc_performance.png
     alt: HPC Performance
@@ -77,7 +79,7 @@
 
 - title: Multi-View 3D Human Reconstruction
   year: "2023"
-  role: "Co-Developer"
+  role: "Developer"
   image:
     src: /assets/img/research/digital_human_reconstruction.png
     position: top
