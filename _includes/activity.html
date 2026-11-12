@@ -14,3 +14,47 @@
       {% endfor %}
   </div>
   
+<script>
+  // Fit each photo row to the content width: same height for all photos,
+  // no cropping, no horizontal scroll. Never taller than MAX_H.
+  (function () {
+    var MAX_H = 200, GAP = 8;
+    function fitLine(imgs, width) {
+      var sum = 0;
+      for (var i = 0; i < imgs.length; i++) {
+        if (!imgs[i].naturalWidth) return; // wait until all are loaded
+        sum += imgs[i].naturalWidth / imgs[i].naturalHeight;
+      }
+      var avail = width - GAP * (imgs.length - 1) - 1;
+      var h = Math.min(MAX_H, Math.floor(avail / sum));
+      for (var j = 0; j < imgs.length; j++) {
+        imgs[j].style.height = h + 'px';
+        imgs[j].style.width = Math.floor(h * imgs[j].naturalWidth / imgs[j].naturalHeight) + 'px';
+      }
+    }
+    // data-rows="N" splits the photos into N lines (first lines get the extra photo)
+    function fit(gallery) {
+      var imgs = Array.prototype.slice.call(gallery.querySelectorAll('img'));
+      var rows = Math.max(1, parseInt(gallery.getAttribute('data-rows'), 10) || 1);
+      var per = Math.ceil(imgs.length / rows);
+      for (var k = 0; k < imgs.length; k += per) {
+        fitLine(imgs.slice(k, k + per), gallery.clientWidth);
+        // force a line break before each new line (added once)
+        if (k > 0 && !(imgs[k].previousElementSibling || {}).classList?.contains('gallery-break')) {
+          var br = document.createElement('div');
+          br.className = 'gallery-break';
+          gallery.insertBefore(br, imgs[k]);
+        }
+      }
+    }
+    function fitAll() {
+      document.querySelectorAll('.activity-gallery').forEach(fit);
+    }
+    document.querySelectorAll('.activity-gallery img').forEach(function (img) {
+      if (!img.complete) img.addEventListener('load', fitAll);
+    });
+    window.addEventListener('load', fitAll);
+    window.addEventListener('resize', fitAll);
+    fitAll();
+  })();
+</script>

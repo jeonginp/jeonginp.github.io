@@ -1,5 +1,6 @@
 {% unless page.layout == "home" %}
 <header class="top-bar">
+  <a class="top-bar-name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
   {% include nav.html %}
 </header>
 {% endunless %}
