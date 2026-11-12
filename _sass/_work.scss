@@ -516,13 +516,13 @@ a.publication-title:hover {
 .work-title {
   margin: 0;
   font-family: "Roboto", sans-serif;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 600;
-  line-height: 1.25;
+  line-height: 1.3;
   color: #222;
 
   @media (max-width: 600px) {
-    font-size: 1.6em;
+    font-size: 1.3em;
   }
 }
 
@@ -535,21 +535,20 @@ a.publication-title:hover {
 
 .work-meta {
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px 32px;
+  flex-direction: column;
+  gap: 4px;
   margin: 0;
 }
 
 .work-meta-item {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  align-items: baseline;
+  gap: 12px;
 
   dt {
-    font-size: 0.72em;
+    flex: 0 0 4.5em;
+    font-size: 0.85em;
     font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
     color: #999;
   }
 

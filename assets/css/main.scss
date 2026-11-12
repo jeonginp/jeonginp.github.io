@@ -51,7 +51,9 @@ $on-laptop: 800px;
   color: inherit !important;
   text-decoration: none !important;
   border-bottom: 1px dashed #888;
-  transition: color 0.2s, border-color 0.2s;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
 }
 
 .page-content p a:hover {
@@ -120,7 +122,7 @@ hr {
 }
 
 .section::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 4px;
   height: 0.9em;
@@ -129,7 +131,6 @@ hr {
   vertical-align: middle;
   border-radius: 2px;
 }
-
 
 .section strong {
   color: #222;
@@ -411,7 +412,7 @@ h2 {
 
 .work-body h2::before,
 .work-body h3::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 4px;
   height: 0.9em;
@@ -462,5 +463,52 @@ h2 {
     display: block;
     overflow-x: auto;
     min-width: 0;
+  }
+}
+
+/* Simple menu bar: Home / Publications / Projects */
+.top-bar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 20px 0;
+
+  @include media-query($on-mobile) {
+    padding: 20px 18px 0;
+  }
+}
+
+.top-bar + .page-content {
+  padding-top: 16px;
+}
+
+.top-bar-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 22px;
+
+  a {
+    font-size: 15px;
+    color: #666;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #111;
+    }
+  }
+}
+
+/* Home: menu sits at the top of the photo column, on the same line as the name */
+.profile-section .top-bar-nav {
+  justify-content: center;
+  margin: 12px 0 56px;
+
+  a {
+    color: #666 !important;
+
+    &:hover {
+      color: #111 !important;
+    }
   }
 }

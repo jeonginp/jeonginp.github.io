@@ -7,6 +7,7 @@ profile_picture:
 ---
 
 <div class="profile-section" style="float: right; text-align: center; margin-left: 30px; margin-bottom: 20px;">
+  {% include nav.html %}
   <div class="profile-pic-container">
     <img src="/assets/img/profile-pic.jpg" alt="website picture" class="profile-pic profile-pic-1" />
     <img src="/assets/img/profile-pic2.JPG" alt="website picture" class="profile-pic profile-pic-2" />
@@ -45,7 +46,12 @@ I am currently a Master’s student in the [HCI Lab](http://hcil.snu.ac.kr/) at 
 
 From January to July 2026, I was a visiting intern at the [Augmented Perception Lab](https://augmented-perception.org/) at Carnegie Mellon University, advised by [Prof. David Lindlbauer](https://www.davidlindlbauer.com). I also have research and industry experience at [Lunit Inc.](https://www.lunit.io/) and the [Max Planck Institute](https://www.mpcdf.mpg.de/).
 
-My previous work lies at the intersection of Visualization, Human-AI interaction, and wearable interactions and XR.
+<p>My previous work lies at the intersection of Visualization, Human-AI interaction, and wearable interactions and XR. <a href="javascript:void(0)" class="more-toggle" onclick="var m=document.getElementById('more-about-me'); m.hidden=!m.hidden;">More about me</a></p>
+
+<div id="more-about-me" class="more-about-me" hidden>
+  <p>Outside of research, I've been involved in <a href="/extracurricular-activities/">student leadership and community activities</a>.</p>
+  <p>In my free time, I enjoy cooking, baking, and knitting.</p>
+</div>
 
 <div style="text-align: center;">
   <picture>
@@ -53,6 +59,14 @@ My previous work lies at the intersection of Visualization, Human-AI interaction
     <img src="assets/img/PrevWorkwithFig.png" alt="Research Overview" style="width: 100%; max-width: 850px;" />
   </picture>
 </div>
+
+<style>
+.more-toggle { margin-left: 6px; font-size: 13px; color: #aaa !important; text-decoration: underline; white-space: nowrap; }
+.more-toggle:hover { color: #666 !important; }
+.more-about-me { margin: -0.4em 0 1.2em; font-size: 14px; }
+.more-about-me p { margin: 0.3em 0 0; color: #777; }
+.more-about-me a { color: #777; text-decoration: underline; }
+</style>
 
 <br>
 
@@ -66,10 +80,12 @@ My previous work lies at the intersection of Visualization, Human-AI interaction
 {% include project.html %}
 </div>
 
+{% comment %}
 <div id="experience" class="home-section">
 <h2 class="section">Research Experience</h2>
 {% include experience.html %}
 </div>
+{% endcomment %}
 
 <br>
 
