@@ -41,6 +41,7 @@ $on-laptop: 800px;
 }
 
 .home-description {
+  width: fit-content; /* box hugs the text, so selection highlight does not run to the page edge */
   margin-right: 20px;
   margin-bottom: 0;
   font-family: "Roboto", sans-serif !important;
@@ -62,6 +63,7 @@ $on-laptop: 800px;
 }
 
 .home-subtitle {
+  width: fit-content; /* box hugs the text, so selection highlight does not run to the page edge */
   font-size: 14px;
   color: #808080;
   margin-top: 0;
@@ -103,6 +105,10 @@ hr {
 }
 
 /* 각 섹션의 박스 스타일 */
+h2.section {
+  width: fit-content; /* box hugs the text, so selection highlight does not run to the page edge; h2 only, since .section is also a card box on work pages */
+}
+
 .section {
   margin-bottom: 0.6rem;
   font-size: 1.6em;

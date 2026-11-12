@@ -40,6 +40,8 @@ profile_picture:
 
 <div style="height: 0.5em;"></div>
 
+<div class="intro-text" markdown="1">
+
 I am interested in designing human-AI interactions that augment people’s abilities in everyday activities in the physical world, using extended reality (XR) and wearable technologies as platforms for exploration.
 
 I am currently a Master’s student in the [HCI Lab](http://hcil.snu.ac.kr/) at Seoul National University, advised by [Prof. Jinwook Seo](https://hcil.snu.ac.kr/people/jinwook-seo). I received my B.S. in Computer Science and Engineering and Mathematical Sciences from Seoul National University, fully funded by the Presidential Science Scholarship.
@@ -54,6 +56,8 @@ From January to July 2026, I was a visiting intern at the [Augmented Perception 
   <p>In my free time, I enjoy cooking, baking, and knitting.</p>
 </div>
 
+</div>
+
 <div style="text-align: center;">
   <picture>
     <source media="(max-width: 768px)" srcset="assets/img/PrevWorkwithFig_horizontal.png" />
@@ -62,6 +66,7 @@ From January to July 2026, I was a visiting intern at the [Augmented Perception 
 </div>
 
 <style>
+.intro-text { display: flow-root; } /* narrows the intro column beside the photo float, so text selection highlight stops at the column edge */
 .more-toggle { font-size: 11px; color: #aaa !important; text-decoration: underline; white-space: nowrap; }
 .more-toggle:hover { color: #666 !important; }
 .more-about-me { margin: -0.7em 0 1.2em; font-size: 14px; text-align: right; display: flow-root; /* stays beside the photo float, so every line ends at the text column edge */ }
