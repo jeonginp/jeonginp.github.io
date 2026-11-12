@@ -12,11 +12,12 @@
   position: relative;
   width: 202px;
   height: 202px;
-  margin: 0 auto;
+  margin: 47px auto 0; /* collapses with the nav's 20px bottom margin; photo top lines up with the first body paragraph */
 
   @include media-query($on-mobile) {
     width: 150px;
     height: 150px;
+    margin-top: 0;
   }
 }
 

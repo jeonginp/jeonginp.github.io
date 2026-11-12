@@ -44,9 +44,10 @@ I am interested in designing human-AI interactions that augment people’s abili
 
 I am currently a Master’s student in the [HCI Lab](http://hcil.snu.ac.kr/) at Seoul National University, advised by [Prof. Jinwook Seo](https://hcil.snu.ac.kr/people/jinwook-seo). I received my B.S. in Computer Science and Engineering and Mathematical Sciences from Seoul National University, fully funded by the Presidential Science Scholarship.
 
-From January to July 2026, I was a visiting intern at the [Augmented Perception Lab](https://augmented-perception.org/) at Carnegie Mellon University, advised by [Prof. David Lindlbauer](https://www.davidlindlbauer.com). I also have research and industry experience at [Lunit Inc.](https://www.lunit.io/) and the [Max Planck Institute](https://www.mpcdf.mpg.de/).
+From January to July 2026, I was a visiting intern at the [Augmented Perception Lab](https://augmented-perception.org/) at Carnegie Mellon University, advised by [Prof. David Lindlbauer](https://www.davidlindlbauer.com). I also have research experiences at [Lunit Inc.](https://www.lunit.io/) and the [Max Planck Institute](https://www.mpcdf.mpg.de/).
 
-<p>My previous work lies at the intersection of Visualization, Human-AI interaction, and wearable interactions and XR. <a href="javascript:void(0)" class="more-toggle" onclick="var m=document.getElementById('more-about-me'); m.hidden=!m.hidden;">More about me</a></p>
+<p>My previous work lies at the intersection of Visualization, Human-AI interaction, and wearable interactions and XR.
+<a href="javascript:void(0)" class="more-toggle" onclick="var m=document.getElementById('more-about-me'); m.hidden=!m.hidden;">More about me</a></p>
 
 <div id="more-about-me" class="more-about-me" hidden>
   <p>Outside of research, I've been involved in <a href="/extracurricular-activities/">student leadership and community activities</a>.</p>
@@ -61,10 +62,12 @@ From January to July 2026, I was a visiting intern at the [Augmented Perception 
 </div>
 
 <style>
-.more-toggle { margin-left: 6px; font-size: 13px; color: #aaa !important; text-decoration: underline; white-space: nowrap; }
+.more-toggle { font-size: 11px; color: #aaa !important; text-decoration: underline; white-space: nowrap; }
 .more-toggle:hover { color: #666 !important; }
-.more-about-me { margin: -0.4em 0 1.2em; font-size: 14px; }
+.more-about-me { margin: -0.7em 0 1.2em; font-size: 14px; text-align: right; display: flow-root; /* stays beside the photo float, so every line ends at the text column edge */ }
+.more-about-me[hidden] { display: none; } /* display: flow-root above would otherwise override the hidden attribute */
 .more-about-me p { margin: 0.3em 0 0; color: #777; }
+.more-about-me p:first-child { margin-top: 0; }
 .more-about-me a { color: #777; text-decoration: underline; }
 </style>
 
@@ -81,6 +84,7 @@ From January to July 2026, I was a visiting intern at the [Augmented Perception 
 </div>
 
 {% comment %}
+
 <div id="experience" class="home-section">
 <h2 class="section">Research Experience</h2>
 {% include experience.html %}
