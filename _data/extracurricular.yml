@@ -1,6 +1,9 @@
   - title: SNU Engineering Honor Society (STEM), Member
     date: Mar 2023 - Aug 2025
     description: Recognized for academic and leadership excellence. Participated in diverse academic, exchange, and volunteer activities, including Vision Expo (mentoring for freshmen), Vision Mentoring (mentoring for high school students), development of the official website, alumni sharing events, and more.
+    seminars:
+      - "Beyond the Boundary between Computers and Humans: User-Centered Interfaces and Data Visualization through HCI"
+      - "My Research Internship at the Max Planck Institute"
     image: /assets/img/leadership/stem
     rows: 2
 

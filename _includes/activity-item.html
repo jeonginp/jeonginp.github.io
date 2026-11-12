@@ -10,6 +10,15 @@
         website=item.website 
       %}
 
+    {% if item.seminars %}
+    <div class="activity-seminars">
+      <span class="activity-seminars-label">Seminars given</span>
+      <ul>
+        {% for s in item.seminars %}<li>{{ s }}</li>{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
     <!-- All photos in one row -->
     <div class="activity-gallery" data-rows="{{ item.rows | default: 1 }}">
         {% assign image_directory = item.image | append: "/" %}
