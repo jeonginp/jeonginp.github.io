@@ -28,10 +28,16 @@
 }
 
 
+/* Fixed media column so every publication's text starts at the same x */
+$pub-media-width: 350px;
+
 .publication-item {
   clear: both;
-  overflow: hidden;
   padding-bottom: 1em;
+  display: grid;
+  grid-template-columns: $pub-media-width minmax(0, 1fr);
+  column-gap: 20px;
+  align-items: start;
 
   @include media-query($on-laptop) {
     display: flex;
@@ -40,24 +46,24 @@
 }
 
 .publication-text {
+  grid-column: 2; /* stay in the text column even if an entry has no image */
+
   @include media-query($on-laptop) {
     order: 1;
   }
 }
 
 .publication-teaser {
-  float: right;
-  margin-left: 20px;
   margin-bottom: 10px;
   width: auto;
-  max-width: 320px !important;
+  max-width: $pub-media-width !important;
   height: auto;
   border-radius: 4px;
 
   @include media-query($on-laptop) {
     order: 2;
     float: none;
-    margin-left: 0;
+    margin-right: 0;
     margin-top: 10px;
     max-width: 100%;
     width: 100%;
@@ -66,8 +72,7 @@
 
 /* Animated teaser containers */
 .teaser-container {
-  float: right;
-  margin-left: 20px;
+  max-width: $pub-media-width;
   margin-bottom: 10px;
   overflow: hidden;
   border-radius: 4px;
@@ -75,7 +80,7 @@
   @include media-query($on-laptop) {
     order: 2;
     float: none;
-    margin-left: 0;
+    margin-right: 0;
     margin-top: 10px;
     width: 100%;
   }
@@ -148,8 +153,7 @@
 }
 
 .video-preview {
-  float: right;
-  margin-left: 20px;
+  max-width: $pub-media-width;
   margin-bottom: 10px;
   width: 262px;
   height: 120px;
@@ -161,7 +165,7 @@
   @include media-query($on-laptop) {
     order: 2;
     float: none;
-    margin-left: 0;
+    margin-right: 0;
     margin-top: 10px;
     width: 100%;
     height: auto;
